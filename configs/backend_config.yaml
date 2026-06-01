@@ -1,0 +1,33 @@
+# IBM Quantum backends used for cached hardware baselines.
+# All three are IBM Heron r2 (156 qubits, identical architecture).
+# Cached honest-baseline measurements live in
+# data/raw/hardware/<backend>/run.npz and run.json.
+
+backends:
+  ibm_kingston:
+    family: heron_r2
+    n_qubits: 156
+    cached_calibration_snapshot: "2026-05-13"
+    chain: [15, 14, 13, 12]
+    role: anchor_device
+  ibm_fez:
+    family: heron_r2
+    n_qubits: 156
+    cached_calibration_snapshot: "2026-05-13"
+    chain: [15, 14, 13, 12]
+    role: fallback
+  ibm_marrakesh:
+    family: heron_r2
+    n_qubits: 156
+    cached_calibration_snapshot: "2026-05-13"
+    chain: [15, 14, 13, 12]
+    role: fallback
+
+note: |
+  IBM Quantum QPU access is NOT required to reproduce the cached results
+  in this repository. The raw hardware measurements (sample means over
+  the 50-witness ensemble at 1024 shots) are provided in
+  data/raw/hardware/<backend>/run.npz. Fresh QPU runs can be reproduced
+  via scripts in scripts/optional_ibm_runs/, but require a valid IBM
+  Quantum account and rotate the quoted detection rates by sampling
+  noise.

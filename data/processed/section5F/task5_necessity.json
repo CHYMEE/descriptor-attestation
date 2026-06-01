@@ -1,0 +1,40 @@
+{
+  "task": "T5_necessity_matrix_partial",
+  "timestamp_utc": "2026-05-15T07:50:36.070559+00:00",
+  "filled_rows": [
+    "B0",
+    "B2",
+    "B3"
+  ],
+  "pending_rows": [
+    "B1"
+  ],
+  "entries": [
+    {
+      "baseline": "B0",
+      "failure_modes": [],
+      "note": "Reference. Per-device-eps construction closes completeness on Fez (in-sample margin = 0) and yields 0/85 phase1, 9/85 phase2 detection. Detection structure across attack families documented in Section 5.C; no failure mode listed."
+    },
+    {
+      "baseline": "B2",
+      "failure_modes": [
+        "completeness_on_fez"
+      ],
+      "note": "Hoeffding-only at eps_H = 0.1341. Higher detection than B0 (2/85 phase1, 20/85 phase2) but fails in-sample completeness on Fez by 0.0468 \u2014 the soundness-side cost of skipping the eps_model + eps_pred budget."
+    },
+    {
+      "baseline": "B1",
+      "failure_modes": [
+        "pending"
+      ],
+      "note": "Descriptor consistency, no quantum execution. Pending Appendix C implementation."
+    },
+    {
+      "baseline": "B3",
+      "failure_modes": [],
+      "note": "Stricker-adapted (L1 mean) at eps_stricker=0.02836. Phase 2 detection rate: 0.1882. Fez in-sample completeness: pass (margin=+0.00122)."
+    }
+  ],
+  "timestamp_utc_b3_appended": "2026-05-18T01:57:28.740989+00:00",
+  "b3_dry_run": null
+}

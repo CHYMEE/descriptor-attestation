@@ -1,0 +1,83 @@
+{
+  "experiment": "phase3_empirical_epsilon_pred",
+  "purpose": "Estimate the predictor's representational error term epsilon_pred(d) for each Phase 2 real device under the deployment-prior predictor. Decomposes the observed hardware max_dev into shot-noise (Hoeffding) and predictor-error contributions. Establishes the empirical anchor for Phase 3's completeness bound: beta_comp <= delta + (predictor-error term).",
+  "timestamp_utc": "2026-05-14T02:13:57.376079+00:00",
+  "config": {
+    "predictor": {
+      "sampler": "sample_descriptors_deployment",
+      "sampler_source": "<repo>/src\\qem_journal\\deployment_prior.py",
+      "train_descriptors": 100,
+      "train_shots": 2048,
+      "witness_seed": 42,
+      "sample_descriptors_seed": 43,
+      "train_residual": 0.015923019498586655,
+      "train_seconds": 68.23
+    },
+    "aersim_mu_estimation": {
+      "method": "density_matrix",
+      "shots": 8192,
+      "shotnoise_hoeffding_floor_at_HIGH_SHOTS_delta": 0.04741959779328583,
+      "note": "mu_i(d) is the AerSim high-shot estimate of E[X_i | d_true=d]. At shots=8192 the per-witness shot-noise standard deviation is ~0.005-0.02 depending on the true expectation magnitude; max-over-50-witnesses tail can reach ~0.03-0.05. epsilon_pred values smaller than the shotnoise floor at HIGH_SHOTS should be interpreted with caution."
+    },
+    "hoeffding": {
+      "n_witnesses": 50,
+      "detection_shots": 1024,
+      "delta": 0.01,
+      "epsilon": 0.1341228766430842,
+      "source": "qem.attestation.hoeffding_bound"
+    }
+  },
+  "anchors_used": {
+    "ibm_kingston": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_kingston\\run.npz",
+    "ibm_fez": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_fez\\run.npz",
+    "ibm_marrakesh": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_marrakesh\\run.npz"
+  },
+  "per_device": [
+    {
+      "device": "ibm_kingston",
+      "epsilon_pred": 0.030063359066843987,
+      "mean_abs_pred_error": 0.011450520129874348,
+      "max_dev_empirical": 0.11389017105102539,
+      "mean_abs_hw_residual": 0.03909546006470919,
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_needed": 0.16418623570992819,
+      "epsilon_pred_residual_floor_at_HIGH_SHOTS": 0.04741959779328583,
+      "epsilon_pred_minus_mu_shotnoise": -0.01735623872644184,
+      "max_dev_empirical_minus_epsilon_needed": -0.050296064658902795,
+      "aersim_seconds": 1.66,
+      "anchor_run_npz": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_kingston\\run.npz"
+    },
+    {
+      "device": "ibm_fez",
+      "epsilon_pred": 0.03582157101482153,
+      "mean_abs_pred_error": 0.008260205243714154,
+      "max_dev_empirical": 0.18470335006713867,
+      "mean_abs_hw_residual": 0.037324122027494015,
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_needed": 0.16994444765790573,
+      "epsilon_pred_residual_floor_at_HIGH_SHOTS": 0.04741959779328583,
+      "epsilon_pred_minus_mu_shotnoise": -0.011598026778464297,
+      "max_dev_empirical_minus_epsilon_needed": 0.014758902409232943,
+      "aersim_seconds": 1.67,
+      "anchor_run_npz": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_fez\\run.npz"
+    },
+    {
+      "device": "ibm_marrakesh",
+      "epsilon_pred": 0.040659897960722446,
+      "mean_abs_pred_error": 0.012724447331856936,
+      "max_dev_empirical": 0.13314276933670044,
+      "mean_abs_hw_residual": 0.030659772057551892,
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_needed": 0.17478277460380665,
+      "epsilon_pred_residual_floor_at_HIGH_SHOTS": 0.04741959779328583,
+      "epsilon_pred_minus_mu_shotnoise": -0.00675969983256338,
+      "max_dev_empirical_minus_epsilon_needed": -0.041640005267106206,
+      "aersim_seconds": 1.67,
+      "anchor_run_npz": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_marrakesh\\run.npz"
+    }
+  ],
+  "interpretation": {
+    "decomposition": "max_dev_empirical = max_i |hardware_measured_i - predicted_i| is approximately bounded by epsilon_pred(d) + (hardware shot-noise at S=1024 shots/witness). Hoeffding epsilon is the formal bound on the shot-noise term. epsilon_needed = epsilon_Hoeffding + epsilon_pred is the per-device threshold the protocol would need to use.",
+    "completeness_bound_anchor": "Phase 3 completeness bound: beta_comp <= delta + f(epsilon_pred(d)). The empirical epsilon_pred values here are the anchor for the predictor-error term in that bound."
+  }
+}

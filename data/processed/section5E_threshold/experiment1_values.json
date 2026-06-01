@@ -1,0 +1,1456 @@
+{
+  "task": "section5E_experiment1_loo_K2",
+  "timestamp_utc": "2026-05-20T03:23:08.898796+00:00",
+  "dry_run": null,
+  "config": {
+    "N_WITNESSES": 50,
+    "DETECTION_SHOTS": 1024,
+    "HIGH_SHOTS": 8192,
+    "DELTA": 0.01,
+    "EPSILON_H": 0.1341228766430842,
+    "n_instances": 30
+  },
+  "configs": [
+    {
+      "id": "C1",
+      "calib": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test": "ibm_marrakesh"
+    },
+    {
+      "id": "C2",
+      "calib": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test": "ibm_fez"
+    },
+    {
+      "id": "C3",
+      "calib": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test": "ibm_kingston"
+    }
+  ],
+  "summary": {
+    "C1": {
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "n_instances": 30,
+      "passes": 30,
+      "fails": 0,
+      "mean_margin": 0.0555696584439526,
+      "median_margin": 0.05431929905898869,
+      "std_margin": 0.008420375834412283,
+      "min_margin": 0.03795256465673447,
+      "max_margin": 0.07315717544406652,
+      "bootstrap_95_ci_mean": [
+        0.052508172976667995,
+        0.058739222409979745
+      ]
+    },
+    "C2": {
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "n_instances": 30,
+      "passes": 0,
+      "fails": 30,
+      "mean_margin": -0.018904807745908487,
+      "median_margin": -0.019498598569191783,
+      "std_margin": 0.004455608786730081,
+      "min_margin": -0.027234871679104655,
+      "max_margin": -0.004307174862481444,
+      "bootstrap_95_ci_mean": [
+        -0.020488093917959162,
+        -0.017168646335682002
+      ]
+    },
+    "C3": {
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "n_instances": 30,
+      "passes": 30,
+      "fails": 0,
+      "mean_margin": 0.06839638608119761,
+      "median_margin": 0.07050469145178795,
+      "std_margin": 0.007385094222852199,
+      "min_margin": 0.0519845187664032,
+      "max_margin": 0.0810318065341562,
+      "bootstrap_95_ci_mean": [
+        0.06568831075225413,
+        0.07112612478929804
+      ]
+    }
+  },
+  "records": [
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 1,
+      "eps_model_heldout": 0.02355290557549128,
+      "eps_pred_test": 0.028269796865060925,
+      "max_dev_test": 0.13306289911270142,
+      "eps_device_test": 0.1859455790836364,
+      "margin": 0.05288267997093499,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 1,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.029118260368704796,
+      "max_dev_test": 0.18679404258728027,
+      "eps_device_test": 0.163241137011789,
+      "margin": -0.02355290557549128,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 1,
+      "eps_model_heldout": 0.02355290557549128,
+      "eps_pred_test": 0.03267355356365442,
+      "max_dev_test": 0.11714231967926025,
+      "eps_device_test": 0.1903493357822299,
+      "margin": 0.07320701610296965,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 2,
+      "eps_model_heldout": 0.019793044583059638,
+      "eps_pred_test": 0.03804335370659828,
+      "max_dev_test": 0.1305273175239563,
+      "eps_device_test": 0.19195927493274212,
+      "margin": 0.06143195740878582,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 2,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.028363725170493126,
+      "max_dev_test": 0.18227964639663696,
+      "eps_device_test": 0.16248660181357732,
+      "margin": -0.019793044583059638,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 2,
+      "eps_model_heldout": 0.019793044583059638,
+      "eps_pred_test": 0.03476961329579353,
+      "max_dev_test": 0.11597025394439697,
+      "eps_device_test": 0.18868553452193737,
+      "margin": 0.0727152805775404,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 3,
+      "eps_model_heldout": 0.022655980468846648,
+      "eps_pred_test": 0.03443996235728264,
+      "max_dev_test": 0.13099050521850586,
+      "eps_device_test": 0.19121881946921349,
+      "margin": 0.060228314250707626,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 3,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03424455225467682,
+      "max_dev_test": 0.19102340936660767,
+      "eps_device_test": 0.16836742889776102,
+      "margin": -0.022655980468846648,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 3,
+      "eps_model_heldout": 0.022655980468846648,
+      "eps_pred_test": 0.03472009440883994,
+      "max_dev_test": 0.11881250143051147,
+      "eps_device_test": 0.1914989515207708,
+      "margin": 0.07268645009025931,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 4,
+      "eps_model_heldout": 0.01624321918294558,
+      "eps_pred_test": 0.050085753202438354,
+      "max_dev_test": 0.13073724508285522,
+      "eps_device_test": 0.20045184902846813,
+      "margin": 0.06971460394561291,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 4,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.0322128850966692,
+      "max_dev_test": 0.18257898092269897,
+      "eps_device_test": 0.1663357617397534,
+      "margin": -0.01624321918294558,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 4,
+      "eps_model_heldout": 0.01624321918294558,
+      "eps_pred_test": 0.02304309792816639,
+      "max_dev_test": 0.12142467498779297,
+      "eps_device_test": 0.17340919375419617,
+      "margin": 0.0519845187664032,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 5,
+      "eps_model_heldout": 0.023508511291004508,
+      "eps_pred_test": 0.03837420046329498,
+      "max_dev_test": 0.12798601388931274,
+      "eps_device_test": 0.1960055883973837,
+      "margin": 0.06801957450807095,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 5,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.028754184022545815,
+      "max_dev_test": 0.18638557195663452,
+      "eps_device_test": 0.16287706066563,
+      "margin": -0.023508511291004508,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 5,
+      "eps_model_heldout": 0.023508511291004508,
+      "eps_pred_test": 0.03217087592929602,
+      "max_dev_test": 0.1160963773727417,
+      "eps_device_test": 0.18980226386338472,
+      "margin": 0.07370588649064302,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 6,
+      "eps_model_heldout": 0.015228470594741195,
+      "eps_pred_test": 0.033709872514009476,
+      "max_dev_test": 0.12532776594161987,
+      "eps_device_test": 0.18306121975183487,
+      "margin": 0.057733453810214996,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 6,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03287113830447197,
+      "max_dev_test": 0.18222248554229736,
+      "eps_device_test": 0.16699401494755617,
+      "margin": -0.015228470594741195,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 6,
+      "eps_model_heldout": 0.015228470594741195,
+      "eps_pred_test": 0.025571309030056,
+      "max_dev_test": 0.1168668270111084,
+      "eps_device_test": 0.1749226562678814,
+      "margin": 0.058055829256772995,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 7,
+      "eps_model_heldout": 0.009660940424658149,
+      "eps_pred_test": 0.030806899070739746,
+      "max_dev_test": 0.1319461464881897,
+      "eps_device_test": 0.1745907161384821,
+      "margin": 0.0426445696502924,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 7,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.0397100355476141,
+      "max_dev_test": 0.18349385261535645,
+      "eps_device_test": 0.1738329121906983,
+      "margin": -0.009660940424658149,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 7,
+      "eps_model_heldout": 0.009660940424658149,
+      "eps_pred_test": 0.03207860141992569,
+      "max_dev_test": 0.11536240577697754,
+      "eps_device_test": 0.17586241848766804,
+      "margin": 0.0605000127106905,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 8,
+      "eps_model_heldout": 0.019656976492263167,
+      "eps_pred_test": 0.03038952872157097,
+      "max_dev_test": 0.13368862867355347,
+      "eps_device_test": 0.18416938185691833,
+      "margin": 0.05048075318336487,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 8,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.032464753836393356,
+      "max_dev_test": 0.18624460697174072,
+      "eps_device_test": 0.16658763047947756,
+      "margin": -0.019656976492263167,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 8,
+      "eps_model_heldout": 0.019656976492263167,
+      "eps_pred_test": 0.031031860620714724,
+      "max_dev_test": 0.122464120388031,
+      "eps_device_test": 0.1848117137560621,
+      "margin": 0.062347593368031085,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 9,
+      "eps_model_heldout": 0.004307174862481444,
+      "eps_pred_test": 0.037983208894729614,
+      "max_dev_test": 0.1384606957435608,
+      "eps_device_test": 0.17641326040029526,
+      "margin": 0.03795256465673447,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 9,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.047992952167987823,
+      "max_dev_test": 0.18642300367355347,
+      "eps_device_test": 0.18211582881107202,
+      "margin": -0.004307174862481444,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 9,
+      "eps_model_heldout": 0.004307174862481444,
+      "eps_pred_test": 0.029126116540282965,
+      "max_dev_test": 0.11554461717605591,
+      "eps_device_test": 0.1675561680458486,
+      "margin": 0.0520115508697927,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 10,
+      "eps_model_heldout": 0.014074684859372466,
+      "eps_pred_test": 0.03833853919059038,
+      "max_dev_test": 0.12731003761291504,
+      "eps_device_test": 0.18653610069304705,
+      "margin": 0.05922606308013201,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 10,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03687295317649841,
+      "max_dev_test": 0.18507051467895508,
+      "eps_device_test": 0.1709958298195826,
+      "margin": -0.014074684859372466,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 10,
+      "eps_model_heldout": 0.014074684859372466,
+      "eps_pred_test": 0.034875305369496346,
+      "max_dev_test": 0.11696654558181763,
+      "eps_device_test": 0.183072866871953,
+      "margin": 0.06610632129013538,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 11,
+      "eps_model_heldout": 0.02301051075861582,
+      "eps_pred_test": 0.032700986601412296,
+      "max_dev_test": 0.12724149227142334,
+      "eps_device_test": 0.18983437400311232,
+      "margin": 0.06259288173168898,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 11,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.025136781856417656,
+      "max_dev_test": 0.18227016925811768,
+      "eps_device_test": 0.15925965849950185,
+      "margin": -0.02301051075861582,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 11,
+      "eps_model_heldout": 0.02301051075861582,
+      "eps_pred_test": 0.037751827389001846,
+      "max_dev_test": 0.12178617715835571,
+      "eps_device_test": 0.19488521479070187,
+      "margin": 0.07309903763234615,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 12,
+      "eps_model_heldout": 0.020389746681906074,
+      "eps_pred_test": 0.030028915032744408,
+      "max_dev_test": 0.13835251331329346,
+      "eps_device_test": 0.18454153835773468,
+      "margin": 0.04618902504444122,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 12,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.031113823875784874,
+      "max_dev_test": 0.18562644720077515,
+      "eps_device_test": 0.16523670051886907,
+      "margin": -0.020389746681906074,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 12,
+      "eps_model_heldout": 0.020389746681906074,
+      "eps_pred_test": 0.032620164565742016,
+      "max_dev_test": 0.11148619651794434,
+      "eps_device_test": 0.1871327878907323,
+      "margin": 0.07564659137278795,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 13,
+      "eps_model_heldout": 0.018654336960173934,
+      "eps_pred_test": 0.030016155913472176,
+      "max_dev_test": 0.13269251585006714,
+      "eps_device_test": 0.1827933695167303,
+      "margin": 0.05010085366666317,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 13,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.0350097231566906,
+      "max_dev_test": 0.18778693675994873,
+      "eps_device_test": 0.1691325997997748,
+      "margin": -0.018654336960173934,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 13,
+      "eps_model_heldout": 0.018654336960173934,
+      "eps_pred_test": 0.026935677975416183,
+      "max_dev_test": 0.11911755800247192,
+      "eps_device_test": 0.17971289157867432,
+      "margin": 0.06059533357620239,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 14,
+      "eps_model_heldout": 0.018936098360575526,
+      "eps_pred_test": 0.04854048788547516,
+      "max_dev_test": 0.12844228744506836,
+      "eps_device_test": 0.20159946288913488,
+      "margin": 0.07315717544406652,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 14,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.030652553774416447,
+      "max_dev_test": 0.18371152877807617,
+      "eps_device_test": 0.16477543041750065,
+      "margin": -0.018936098360575526,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 14,
+      "eps_model_heldout": 0.018936098360575526,
+      "eps_pred_test": 0.03549024648964405,
+      "max_dev_test": 0.11690366268157959,
+      "eps_device_test": 0.18854922149330378,
+      "margin": 0.07164555881172419,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 15,
+      "eps_model_heldout": 0.02101384270296225,
+      "eps_pred_test": 0.03536701109260321,
+      "max_dev_test": 0.1265464425086975,
+      "eps_device_test": 0.19050373043864965,
+      "margin": 0.06395728792995214,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 15,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.02691708505153656,
+      "max_dev_test": 0.182053804397583,
+      "eps_device_test": 0.16103996169462076,
+      "margin": -0.02101384270296225,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 15,
+      "eps_model_heldout": 0.02101384270296225,
+      "eps_pred_test": 0.03875694330781698,
+      "max_dev_test": 0.12452983856201172,
+      "eps_device_test": 0.19389366265386343,
+      "margin": 0.06936382409185171,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 16,
+      "eps_model_heldout": 0.01869733798608908,
+      "eps_pred_test": 0.03033247496932745,
+      "max_dev_test": 0.13117897510528564,
+      "eps_device_test": 0.18315268959850073,
+      "margin": 0.051973714493215084,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 16,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.029245451092720032,
+      "max_dev_test": 0.1820656657218933,
+      "eps_device_test": 0.16336832773580423,
+      "margin": -0.01869733798608908,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 16,
+      "eps_model_heldout": 0.01869733798608908,
+      "eps_pred_test": 0.03161782585084438,
+      "max_dev_test": 0.11551570892333984,
+      "eps_device_test": 0.18443804048001766,
+      "margin": 0.06892233155667782,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 17,
+      "eps_model_heldout": 0.018991267115928023,
+      "eps_pred_test": 0.034898338839411736,
+      "max_dev_test": 0.12232458591461182,
+      "eps_device_test": 0.18801248259842396,
+      "margin": 0.06568789668381214,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 17,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.0320466123521328,
+      "max_dev_test": 0.18516075611114502,
+      "eps_device_test": 0.166169488995217,
+      "margin": -0.018991267115928023,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 17,
+      "eps_model_heldout": 0.018991267115928023,
+      "eps_pred_test": 0.03344861976802349,
+      "max_dev_test": 0.119712233543396,
+      "eps_device_test": 0.1865627635270357,
+      "margin": 0.06685052998363972,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 18,
+      "eps_model_heldout": 0.0193402206461204,
+      "eps_pred_test": 0.029246554244309664,
+      "max_dev_test": 0.1285145878791809,
+      "eps_device_test": 0.18270965153351426,
+      "margin": 0.05419506365433335,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 18,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.026962129399180412,
+      "max_dev_test": 0.180425226688385,
+      "eps_device_test": 0.1610850060422646,
+      "margin": -0.0193402206461204,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 18,
+      "eps_model_heldout": 0.0193402206461204,
+      "eps_pred_test": 0.04239701107144356,
+      "max_dev_test": 0.12355870008468628,
+      "eps_device_test": 0.19586010836064816,
+      "margin": 0.07230140827596188,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 19,
+      "eps_model_heldout": 0.016704985679246276,
+      "eps_pred_test": 0.029610760509967804,
+      "max_dev_test": 0.12880873680114746,
+      "eps_device_test": 0.18043862283229828,
+      "margin": 0.05162988603115082,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 19,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.036285363137722015,
+      "max_dev_test": 0.1871132254600525,
+      "eps_device_test": 0.17040823978080621,
+      "margin": -0.016704985679246276,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 19,
+      "eps_model_heldout": 0.016704985679246276,
+      "eps_pred_test": 0.030231989920139313,
+      "max_dev_test": 0.11883699893951416,
+      "eps_device_test": 0.1810598522424698,
+      "margin": 0.06222285330295563,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 20,
+      "eps_model_heldout": 0.027234871679104655,
+      "eps_pred_test": 0.03380662016570568,
+      "max_dev_test": 0.1310235857963562,
+      "eps_device_test": 0.19516436848789454,
+      "margin": 0.06414078269153833,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 20,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.0304230572655797,
+      "max_dev_test": 0.19178080558776855,
+      "eps_device_test": 0.1645459339086639,
+      "margin": -0.027234871679104655,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 20,
+      "eps_model_heldout": 0.027234871679104655,
+      "eps_pred_test": 0.03438266646116972,
+      "max_dev_test": 0.1189994215965271,
+      "eps_device_test": 0.19574041478335857,
+      "margin": 0.07674099318683147,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 21,
+      "eps_model_heldout": 0.015012778149105399,
+      "eps_pred_test": 0.029985181987285614,
+      "max_dev_test": 0.1325957179069519,
+      "eps_device_test": 0.1791208367794752,
+      "margin": 0.04652511887252331,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 21,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.036171430721879005,
+      "max_dev_test": 0.1853070855140686,
+      "eps_device_test": 0.1702943073649632,
+      "margin": -0.015012778149105399,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 21,
+      "eps_model_heldout": 0.015012778149105399,
+      "eps_pred_test": 0.04434971138834953,
+      "max_dev_test": 0.1160573959350586,
+      "eps_device_test": 0.19348536618053913,
+      "margin": 0.07742797024548054,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 22,
+      "eps_model_heldout": 0.02326818908856043,
+      "eps_pred_test": 0.03886358626186848,
+      "max_dev_test": 0.1350843906402588,
+      "eps_device_test": 0.1962546519935131,
+      "margin": 0.06117026135325432,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 22,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03014112077653408,
+      "max_dev_test": 0.1875321865081787,
+      "eps_device_test": 0.16426399741961828,
+      "margin": -0.02326818908856043,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 22,
+      "eps_model_heldout": 0.02326818908856043,
+      "eps_pred_test": 0.030469683930277824,
+      "max_dev_test": 0.11581003665924072,
+      "eps_device_test": 0.18786074966192245,
+      "margin": 0.07205071300268173,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 23,
+      "eps_model_heldout": 0.018260946304656356,
+      "eps_pred_test": 0.03241316229104996,
+      "max_dev_test": 0.13035345077514648,
+      "eps_device_test": 0.1847969852387905,
+      "margin": 0.05444353446364403,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 23,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.029029589146375656,
+      "max_dev_test": 0.1814134120941162,
+      "eps_device_test": 0.16315246578945986,
+      "margin": -0.018260946304656356,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 23,
+      "eps_model_heldout": 0.018260946304656356,
+      "eps_pred_test": 0.03053001407533884,
+      "max_dev_test": 0.121101975440979,
+      "eps_device_test": 0.1829138370230794,
+      "margin": 0.06181186158210039,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 24,
+      "eps_model_heldout": 0.02018570321903357,
+      "eps_pred_test": 0.029994558542966843,
+      "max_dev_test": 0.12977951765060425,
+      "eps_device_test": 0.1843031384050846,
+      "margin": 0.05452362075448036,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 24,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.02930936962366104,
+      "max_dev_test": 0.1836179494857788,
+      "eps_device_test": 0.16343224626674524,
+      "margin": -0.02018570321903357,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 24,
+      "eps_model_heldout": 0.02018570321903357,
+      "eps_pred_test": 0.03644765913486481,
+      "max_dev_test": 0.11772114038467407,
+      "eps_device_test": 0.19075623899698257,
+      "margin": 0.0730350986123085,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 25,
+      "eps_model_heldout": 0.023377286543257325,
+      "eps_pred_test": 0.027895210310816765,
+      "max_dev_test": 0.13616204261779785,
+      "eps_device_test": 0.1853953734971583,
+      "margin": 0.04923333087936044,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 25,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03461216343566775,
+      "max_dev_test": 0.19211232662200928,
+      "eps_device_test": 0.16873504007875195,
+      "margin": -0.023377286543257325,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 25,
+      "eps_model_heldout": 0.023377286543257325,
+      "eps_pred_test": 0.0379607230424881,
+      "max_dev_test": 0.11729156970977783,
+      "eps_device_test": 0.19546088622882962,
+      "margin": 0.07816931651905179,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 26,
+      "eps_model_heldout": 0.021918303140558093,
+      "eps_pred_test": 0.036302875727415085,
+      "max_dev_test": 0.13833385705947876,
+      "eps_device_test": 0.19234405551105738,
+      "margin": 0.05401019845157862,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 26,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.03094091545790434,
+      "max_dev_test": 0.18698209524154663,
+      "eps_device_test": 0.16506379210098854,
+      "margin": -0.021918303140558093,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 26,
+      "eps_model_heldout": 0.021918303140558093,
+      "eps_pred_test": 0.03246900998055935,
+      "max_dev_test": 0.1128888726234436,
+      "eps_device_test": 0.18851018976420164,
+      "margin": 0.07562131714075804,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 27,
+      "eps_model_heldout": 0.021988987730003684,
+      "eps_pred_test": 0.03585217706859112,
+      "max_dev_test": 0.12980985641479492,
+      "eps_device_test": 0.191964041441679,
+      "margin": 0.06215418502688408,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 27,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.027414413169026375,
+      "max_dev_test": 0.18352627754211426,
+      "eps_device_test": 0.16153728981211057,
+      "margin": -0.021988987730003684,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 27,
+      "eps_model_heldout": 0.021988987730003684,
+      "eps_pred_test": 0.027902327477931976,
+      "max_dev_test": 0.11909019947052002,
+      "eps_device_test": 0.18401419185101986,
+      "margin": 0.06492399238049984,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 28,
+      "eps_model_heldout": 0.01976171279617378,
+      "eps_pred_test": 0.02382479328662157,
+      "max_dev_test": 0.13365775346755981,
+      "eps_device_test": 0.17770938272587955,
+      "margin": 0.044051629258319736,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 28,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.026933014625683427,
+      "max_dev_test": 0.1808176040649414,
+      "eps_device_test": 0.16105589126876763,
+      "margin": -0.01976171279617378,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 28,
+      "eps_model_heldout": 0.01976171279617378,
+      "eps_pred_test": 0.041010744869709015,
+      "max_dev_test": 0.11386352777481079,
+      "eps_device_test": 0.194895334308967,
+      "margin": 0.0810318065341562,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 29,
+      "eps_model_heldout": 0.01701782810793051,
+      "eps_pred_test": 0.03082955628633499,
+      "max_dev_test": 0.13285547494888306,
+      "eps_device_test": 0.1819702610373497,
+      "margin": 0.049114786088466644,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 29,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.031627997756004333,
+      "max_dev_test": 0.18276870250701904,
+      "eps_device_test": 0.16575087439908853,
+      "margin": -0.01701782810793051,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 29,
+      "eps_model_heldout": 0.01701782810793051,
+      "eps_pred_test": 0.031158175319433212,
+      "max_dev_test": 0.11852842569351196,
+      "eps_device_test": 0.18229888007044792,
+      "margin": 0.06377045437693596,
+      "passes": true
+    },
+    {
+      "config_id": "C1",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_fez"
+      ],
+      "test_backend": "ibm_marrakesh",
+      "predictor_seed": 30,
+      "eps_model_heldout": 0.014697370392389386,
+      "eps_pred_test": 0.036217489279806614,
+      "max_dev_test": 0.1371137499809265,
+      "eps_device_test": 0.1850377363152802,
+      "margin": 0.047923986334353685,
+      "passes": true
+    },
+    {
+      "config_id": "C2",
+      "calib_backends": [
+        "ibm_kingston",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_fez",
+      "predictor_seed": 30,
+      "eps_model_heldout": 0.0,
+      "eps_pred_test": 0.038675759453326464,
+      "max_dev_test": 0.18749600648880005,
+      "eps_device_test": 0.17279863609641066,
+      "margin": -0.014697370392389386,
+      "passes": false
+    },
+    {
+      "config_id": "C3",
+      "calib_backends": [
+        "ibm_fez",
+        "ibm_marrakesh"
+      ],
+      "test_backend": "ibm_kingston",
+      "predictor_seed": 30,
+      "eps_model_heldout": 0.014697370392389386,
+      "eps_pred_test": 0.03444472700357437,
+      "max_dev_test": 0.11992484331130981,
+      "eps_device_test": 0.18326497403904796,
+      "margin": 0.06334013072773814,
+      "passes": true
+    }
+  ],
+  "sanity_check": {
+    "config2_mean": -0.018904807745908487,
+    "config2_passes": 0,
+    "config2_n": 30,
+    "passed": true
+  }
+}

@@ -1,0 +1,17 @@
+# Runtime dependencies for descriptor-attestation reproduction.
+# Pinned to versions known to reproduce the manuscript numbers.
+# Python 3.10+ recommended.
+
+numpy>=2.0,<3.0
+scipy>=1.13,<2.0
+scikit-learn>=1.5,<2.0
+matplotlib>=3.9,<4.0
+pyyaml>=6.0,<7.0
+
+# Quantum simulation (AerSim density-matrix is the only quantum dependency
+# required for reproducing the cached results; no IBM Quantum access needed).
+qiskit>=2.0,<3.0
+qiskit-aer>=0.17,<0.20
+
+# Testing
+pytest>=8.0,<9.0

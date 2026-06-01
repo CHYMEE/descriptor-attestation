@@ -1,0 +1,389 @@
+{
+  "experiment": "phase2_multi_backend_reproduction",
+  "backend_name": "ibm_marrakesh",
+  "submission_timestamp_utc": "2026-05-13T02:53:07.480271+00:00",
+  "result_retrieval_timestamp_utc": "2026-05-13T02:53:31.587732+00:00",
+  "wall_clock_submit_to_result_seconds": 24.11,
+  "ibm_job_id": "REDACTED-FOR-PUBLIC-RELEASE",
+  "ibm_job_creation_date_utc": "2026-05-13T02:53:09.129732+00:00",
+  "ibm_job_usage_seconds": 15.0,
+  "ibm_job_metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.46.1,qiskit-2.4.1*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-05-13T02:53:09.129732Z",
+      "finished": "2026-05-13T02:53:30.333079Z",
+      "running": "2026-05-13T02:53:10.583372Z"
+    },
+    "bss": {
+      "seconds": 15
+    },
+    "usage": {
+      "quantum_seconds": 15,
+      "seconds": 15,
+      "status": "complete"
+    }
+  },
+  "ibm_account": {
+    "channel": "ibm_quantum_platform",
+    "instance_id": "crn:v1:bluemix:public:quantum-computing:us-east:a/d529720d65514578ae53013c1732d045:a72e9f18-6c64-4d86-b303-141521cdb740::",
+    "plan_id": "850b21a7-71de-4e53-9441-1abdd202f35d",
+    "usage_at_preflight": {
+      "instance_id": "crn:v1:bluemix:public:quantum-computing:us-east:a/d529720d65514578ae53013c1732d045:a72e9f18-6c64-4d86-b303-141521cdb740::",
+      "plan_id": "850b21a7-71de-4e53-9441-1abdd202f35d",
+      "usage_consumed_seconds": 39,
+      "usage_period": {
+        "start_time": "2026-04-15T02:39:30.868Z",
+        "end_time": "2026-05-13T02:39:30.868Z"
+      },
+      "usage_limit_seconds": 600,
+      "usage_limit_reached": false,
+      "usage_remaining_seconds": 561
+    }
+  },
+  "backend_summary": {
+    "name": "ibm_marrakesh",
+    "n_qubits": 156,
+    "queue_at_preflight": 0,
+    "operational_at_preflight": true,
+    "status_msg_at_preflight": "active",
+    "family": "Heron",
+    "revision": "2"
+  },
+  "chain_selection": {
+    "chain": [
+      13,
+      14,
+      15,
+      19
+    ],
+    "score": 0.004426254734808527,
+    "n_missing_cal_values": 0,
+    "topology": "linear",
+    "chain_qubit_degrees": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "selection_rule": "lowest sum(1Q gate err)+sum(2Q cz err), tie-break lex canonical chain",
+    "n_candidates_considered": 306,
+    "linear_alternative_considered": false,
+    "linear_alternative": null
+  },
+  "calibration_at_submission": {
+    "chain": [
+      13,
+      14,
+      15,
+      19
+    ],
+    "chain_plus_neighbors_qubit_indices": [
+      12,
+      13,
+      14,
+      15,
+      19,
+      35
+    ],
+    "per_qubit": [
+      {
+        "qubit": 12,
+        "t1_us": 346.9105086284512,
+        "t2_us": 145.35720722139797,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 0.00017890755971583007,
+          "x": 0.00017890755971583007,
+          "rz": 0.0,
+          "id": 0.00017890755971583007
+        },
+        "readout_error": 0.0068359375
+      },
+      {
+        "qubit": 13,
+        "t1_us": 184.78990069266035,
+        "t2_us": 238.82060848256324,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 0.0002477690250616628,
+          "x": 0.0002477690250616628,
+          "rz": 0.0,
+          "id": 0.0002477690250616628
+        },
+        "readout_error": 0.03955078125
+      },
+      {
+        "qubit": 14,
+        "t1_us": 300.7046946574156,
+        "t2_us": 136.6497705239818,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 0.00012862962585896484,
+          "x": 0.00012862962585896484,
+          "rz": 0.0,
+          "id": 0.00012862962585896484
+        },
+        "readout_error": 0.0078125
+      },
+      {
+        "qubit": 15,
+        "t1_us": 300.50975723555314,
+        "t2_us": 30.113310422920662,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 0.0001821817373417062,
+          "x": 0.0001821817373417062,
+          "rz": 0.0,
+          "id": 0.0001821817373417062
+        },
+        "readout_error": 0.01513671875
+      },
+      {
+        "qubit": 19,
+        "t1_us": 149.21059756993117,
+        "t2_us": 61.98834757940928,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 0.00030452061766247614,
+          "x": 0.00030452061766247614,
+          "rz": 0.0,
+          "id": 0.00030452061766247614
+        },
+        "readout_error": 0.005859375
+      },
+      {
+        "qubit": 35,
+        "t1_us": 447.5462791056166,
+        "t2_us": 388.5935304340779,
+        "frequency_ghz": null,
+        "single_qubit_gate_errors": {
+          "sx": 8.102869273595418e-05,
+          "x": 8.102869273595418e-05,
+          "rz": 0.0,
+          "id": 8.102869273595418e-05
+        },
+        "readout_error": 0.07666015625
+      }
+    ],
+    "two_qubit_cz_within_set": [
+      {
+        "edge": [
+          11,
+          12
+        ],
+        "error": 0.001345087019656549,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          12,
+          11
+        ],
+        "error": 0.001345087019656549,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          12,
+          13
+        ],
+        "error": 0.0014312240137782095,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          13,
+          12
+        ],
+        "error": 0.0014312240137782095,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          13,
+          14
+        ],
+        "error": 0.0011382055837469707,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          14,
+          13
+        ],
+        "error": 0.0011382055837469707,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          14,
+          15
+        ],
+        "error": 0.0013154778258779865,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          15,
+          14
+        ],
+        "error": 0.0013154778258779865,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          15,
+          19
+        ],
+        "error": 0.0011094703192587596,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          19,
+          15
+        ],
+        "error": 0.0011094703192587596,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          19,
+          35
+        ],
+        "error": 0.0014851527180403667,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          34,
+          35
+        ],
+        "error": 0.0016769585131648779,
+        "duration_ns": 68.0
+      },
+      {
+        "edge": [
+          35,
+          19
+        ],
+        "error": 0.0014851527180403667,
+        "duration_ns": 80.0
+      },
+      {
+        "edge": [
+          35,
+          34
+        ],
+        "error": 0.0016769585131648779,
+        "duration_ns": 68.0
+      }
+    ]
+  },
+  "experiment_parameters": {
+    "n_witnesses": 50,
+    "witness_depth": 5,
+    "shots_per_witness": 1024,
+    "train_descriptors": 100,
+    "train_shots": 2048,
+    "transpiler_optimization_level": 1,
+    "transpiler_initial_layout": [
+      13,
+      14,
+      15,
+      19
+    ],
+    "transpiler_other_kwargs": {}
+  },
+  "random_seeds": {
+    "witness_set_generate": 42,
+    "sample_descriptors": 43,
+    "noted_stochastic_elements": [
+      "qiskit_aer per-shot RNG inside QuantumDevice.run_circuit is unseeded in conference code; train_residual is stochastic across runs. Hardware shot RNG is non-reproducible by nature."
+    ]
+  },
+  "package_versions": {
+    "python": "3.13.5",
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.46.1",
+    "qiskit-aer": "0.17.2",
+    "numpy": "2.4.4",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0"
+  },
+  "results": {
+    "pearson_r": 0.9528763506666341,
+    "rmse": 0.06740763783454895,
+    "mean_abs_residual": 0.050979770720005035,
+    "max_abs_residual": 0.15898583829402924,
+    "train_residual": 0.015371757559478283,
+    "train_residual_note": "Predictor is shared across all Phase 2 backends; train_residual is identical for every backend in this run, sampled once from the unseeded AerSimulator distribution at startup.",
+    "training_seconds": 67.85,
+    "transpile_seconds": 0.48
+  },
+  "pass_criteria": {
+    "primary_pearson_r_min": 0.905,
+    "secondary_rmse_max": 0.15,
+    "pass_primary": true,
+    "pass_secondary": true,
+    "pass_overall": true,
+    "blocking": false,
+    "note": "Pass criteria are descriptive across all three Heron r2 backends. No script-level abort on pass-criteria failure. Every backend's outcome \u2014 pass or fail \u2014 is a finding to be analyzed. A Kingston failure is a temporal-reproducibility concern; a Fez/Marrakesh failure characterizes calibration-induced spread on the same architecture (cross-device comparison)."
+  },
+  "conference_comparison": {
+    "conference_metrics": {
+      "pearson_r": 0.9393,
+      "rmse": 0.0752,
+      "train_residual": 0.0156,
+      "n_witnesses": 50,
+      "shots": 1024
+    },
+    "conference_run_metadata": {
+      "job_id": "REDACTED-FOR-PUBLIC-RELEASE",
+      "backend_name": "ibm_kingston",
+      "run_timestamp": "2026-04-29 14:58:16",
+      "run_timestamp_tz_note": "local timezone in qiskit log; user is in KST (UTC+9), UTC equivalent ~= 2026-04-29 05:58:16Z",
+      "qubit_chain": [
+        15,
+        14,
+        13,
+        12
+      ]
+    },
+    "conference_calibration": {
+      "t1_us": [
+        393.49408086,
+        368.56203856,
+        442.97967026,
+        320.14376122
+      ],
+      "t2_us": [
+        357.97042061,
+        544.9187567,
+        382.45897019,
+        280.67185681
+      ],
+      "gate_err": [
+        0.00011567,
+        0.00026816,
+        0.00030064,
+        0.00027583
+      ],
+      "readout_err": [
+        0.00732422,
+        0.0267334,
+        0.0090332,
+        0.0291748
+      ]
+    },
+    "deltas": {
+      "pearson_r_delta": 0.013576,
+      "rmse_delta": -0.007792,
+      "train_residual_delta": -0.000228
+    },
+    "cross_device_comparison": true,
+    "cross_device_note": "Conference baseline backend is ibm_kingston. Comparing other backends to Kingston conference numbers is a cross-device comparison, not strict reproduction.",
+    "notes": ""
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task": "T5b_aggregated_scaling_realized",
+  "timestamp_utc": "2026-05-14T09:31:01.052338+00:00",
+  "n_trials": 30,
+  "scaling_test_delta": 0.05,
+  "epsilon_device_real_apriori": {
+    "ibm_kingston": 0.1641228766430842,
+    "ibm_fez": 0.1851228766430842,
+    "ibm_marrakesh": 0.1751228766430842
+  },
+  "rule": "Aggregate per-trial honest-baseline device-evaluations across N_TRIALS=30 trials. Per-trial: predictor retrained (fresh AerSim shot RNG); real devices use a-priori hardcoded \u03b5_device; sim devices use per-trial \u03b5_device_sim = \u03b5_H + \u03b5_pred(d_sim) at 8192 shots.",
+  "per_N": [
+    {
+      "N": 3,
+      "n_trials": 30,
+      "n_device_evaluations": 90,
+      "k_flagged": 23,
+      "type_I_rate": 0.25555555555555554,
+      "wilson_upper_ci": 0.3543764898755346,
+      "wilson_lower_ci": 0.17674759373369173,
+      "clopper_pearson_upper_ci": 0.35838597067464667,
+      "clopper_pearson_lower_ci": 0.16940626930248026,
+      "threshold_delta": 0.05,
+      "passes_wilson_upper_le_delta": false
+    },
+    {
+      "N": 5,
+      "n_trials": 30,
+      "n_device_evaluations": 150,
+      "k_flagged": 23,
+      "type_I_rate": 0.15333333333333332,
+      "wilson_upper_ci": 0.2195798317233324,
+      "wilson_lower_ci": 0.10439953770520066,
+      "clopper_pearson_upper_ci": 0.22113973314511057,
+      "clopper_pearson_lower_ci": 0.0997519514155865,
+      "threshold_delta": 0.05,
+      "passes_wilson_upper_le_delta": false
+    },
+    {
+      "N": 8,
+      "n_trials": 30,
+      "n_device_evaluations": 240,
+      "k_flagged": 23,
+      "type_I_rate": 0.09583333333333334,
+      "wilson_upper_ci": 0.13969197602598887,
+      "wilson_lower_ci": 0.06470910926010454,
+      "clopper_pearson_upper_ci": 0.14032372661070566,
+      "clopper_pearson_lower_ci": 0.06172409528887419,
+      "threshold_delta": 0.05,
+      "passes_wilson_upper_le_delta": false
+    }
+  ],
+  "note": "Status update: this replaces the prior task5b_aggregated_scaling.json which was deferred. Compute footprint: 30 predictor retrains + per-trial 3-real + 5-sim AerSim mu(d) at 8192 + 5-sim measurements at 1024 = ~83s/trial, ~42min total."
+}

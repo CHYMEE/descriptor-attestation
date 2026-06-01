@@ -1,0 +1,58 @@
+# Secrets
+.env
+*.token
+*credentials*
+*.pem
+.ibm/
+.qiskit/
+
+# Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+.spyderproject
+.spyproject
+Thumbs.db
+
+# Scratch
+outputs/tmp/
+scratch/
+private/
+raw_private/
+*.log
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+*.out
+
+# Virtualenvs
+venv/
+.venv/
+env/
+ENV/
+
+# Local Claude/agent configs
+.claude/

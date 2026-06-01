@@ -1,0 +1,50 @@
+{
+  "experiment": "phase3_B_per_device_epsilon_demo",
+  "timestamp_utc": "2026-05-14T02:26:18.841987+00:00",
+  "purpose": "Empirical demonstration of Theorem 1 (Completeness with predictor-error correction): when the protocol uses a per-device threshold epsilon_device = epsilon_Hoeffding + epsilon_pred(d) + epsilon_model(d_hw), every honest real device passes.",
+  "config": {
+    "delta": 0.01,
+    "epsilon_Hoeffding": 0.1341228766430842,
+    "aersim_mu_shots": 8192
+  },
+  "per_device": [
+    {
+      "device": "ibm_kingston",
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_pred": 0.03572191949933767,
+      "epsilon_model": 0.0,
+      "epsilon_device": 0.16984479614242187,
+      "max_dev_hw": 0.11928725242614746,
+      "passes_at_device_epsilon": true,
+      "aersim_mu_seconds": 1.6,
+      "anchor": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_kingston"
+    },
+    {
+      "device": "ibm_fez",
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_pred": 0.03756578639149666,
+      "epsilon_model": 0.009179962606288283,
+      "epsilon_device": 0.18086862564086914,
+      "max_dev_hw": 0.18086862564086914,
+      "passes_at_device_epsilon": true,
+      "aersim_mu_seconds": 1.58,
+      "anchor": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_fez"
+    },
+    {
+      "device": "ibm_marrakesh",
+      "epsilon_Hoeffding": 0.1341228766430842,
+      "epsilon_pred": 0.03862478584051132,
+      "epsilon_model": 0.0,
+      "epsilon_device": 0.17274766248359552,
+      "max_dev_hw": 0.12329256534576416,
+      "passes_at_device_epsilon": true,
+      "aersim_mu_seconds": 1.59,
+      "anchor": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_marrakesh"
+    }
+  ],
+  "verdict": {
+    "n_pass": 3,
+    "n_total": 3,
+    "all_pass": true
+  }
+}

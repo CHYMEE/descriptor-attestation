@@ -1,0 +1,32 @@
+{
+  "task": "T3_mcnemar_B2_vs_B0",
+  "timestamp_utc_initial": "2026-05-15T07:50:36.070559+00:00",
+  "source": "results/phase3/final_results/attack_sweep_per_device_epsilon.json",
+  "comparisons": [
+    {
+      "comparison": "B2_vs_B0",
+      "n_total_pairs": 170,
+      "n11_both_flag": 9,
+      "n10_b0_only_flag": 0,
+      "n01_b2_only_flag": 13,
+      "n00_neither_flag": 148,
+      "discordant_pairs": 13,
+      "mcnemar_exact_p_value_two_sided": 0.00024414062500000016,
+      "test": "exact McNemar (binomial)",
+      "interpretation": "B2 catches strictly more attacks than B0 (every B0 detection is also a B2 detection, since eps_global <= eps_device); the McNemar test reduces to a binomial test that all discordant pairs are B2-only."
+    },
+    {
+      "comparison": "B3_vs_B0",
+      "n_total_pairs": 170,
+      "n11_both_flag": 3,
+      "n10_b0_only_flag": 6,
+      "n01_b3_only_flag": 29,
+      "n00_neither_flag": 132,
+      "discordant_pairs": 35,
+      "mcnemar_exact_p_value_two_sided": 0.00011684186756610884,
+      "test": "exact McNemar (binomial)"
+    }
+  ],
+  "timestamp_utc_b3_appended": "2026-05-18T01:57:28.740989+00:00",
+  "b3_dry_run": null
+}

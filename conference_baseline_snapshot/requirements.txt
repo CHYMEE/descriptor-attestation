@@ -1,0 +1,11 @@
+torch
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tqdm
+qiskit>=1.0
+qiskit-aer>=0.13
+mitiq
+pytest

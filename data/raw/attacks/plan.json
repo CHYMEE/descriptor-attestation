@@ -1,0 +1,114 @@
+{
+  "experiment": "phase2_attack_parameter_sweep",
+  "timestamp_utc": "2026-05-13T04:41:48.914974+00:00",
+  "notes": "",
+  "package_versions": {
+    "python": "3.13.5",
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.46.1",
+    "qiskit-aer": "0.17.2",
+    "numpy": "2.4.4",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0"
+  },
+  "anchors_planned": [
+    {
+      "label": "phase1_anchor",
+      "run_dir": "<repo>/results\\phase1\\20260506T075350Z_baseline_n50_ibm_kingston",
+      "ibm_job_id": "REDACTED-FOR-PUBLIC-RELEASE",
+      "raw_result_pkl_present": true,
+      "chain": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "stored_metrics": {
+        "pearson_r": 0.9177098675848104,
+        "rmse": 0.09224062412977219,
+        "mean_abs_residual": 0.07779816538095474
+      }
+    },
+    {
+      "label": "phase2_anchor",
+      "run_dir": "<repo>/results\\phase2\\20260513T023922Z_multi_backend\\ibm_kingston",
+      "ibm_job_id": "REDACTED-FOR-PUBLIC-RELEASE",
+      "raw_result_pkl_present": true,
+      "chain": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "stored_metrics": {
+        "pearson_r": 0.9287920934916725,
+        "rmse": 0.08313073962926865,
+        "mean_abs_residual": 0.0658380538225174
+      }
+    }
+  ],
+  "attack_grid_spec": {
+    "uniform_rhos": [
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "single_param_rhos": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "single_params": [
+      "T1",
+      "T2",
+      "gate",
+      "readout"
+    ],
+    "two_param_pairs": [
+      [
+        "T1",
+        "T2"
+      ],
+      [
+        "gate",
+        "readout"
+      ]
+    ],
+    "two_param_rhos": [
+      0.5,
+      0.8
+    ],
+    "random_direction_seed": 44,
+    "random_direction_count": 20,
+    "random_direction_magnitudes": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "random_direction_max_rejections": 1000,
+    "total_attacks_per_anchor": 85,
+    "total_attacks_overall": 170
+  },
+  "predictor_handling": {
+    "policy": "each anchor pairs with its own independently re-trained predictor",
+    "phase1_predictor_train_residual": 0.015806902199983597,
+    "phase2_predictor_train_residual": 0.015513787977397442,
+    "stochastic_note": "qiskit_aer per-shot RNG is unseeded inside QuantumDevice.run_circuit; train_residual varies stochastically across runs."
+  },
+  "physical_constraints": {
+    "uniform_single_two_param": "T2 clamped to min(T2, 2*T1 - 1e-6) per qubit after scaling",
+    "random_direction": "16-D Euclidean unit vectors at the chosen magnitudes can produce gate/readout components outside [0,1]; reject-resample replaced with sample-once + physically_valid flag per entry"
+  },
+  "pass_criteria": {
+    "primary_pearson_r_min": 0.905,
+    "secondary_rmse_max": 0.15,
+    "blocking": false,
+    "attack_undetected_semantics": "attack_undetected = pass_overall; true means the attack got through"
+  }
+}

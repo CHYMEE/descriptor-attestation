@@ -1,0 +1,48 @@
+# Locked experimental configuration. Changing these breaks reproducibility
+# of the cached results.
+
+witness:
+  n_witnesses: 50
+  depth: 5
+  seed: 42
+
+predictor:
+  prior: deployment       # see deployment_prior.sample_descriptors_deployment
+  n_train_descriptors: 100
+  train_shots: 2048
+  desc_sampling_seed: 43
+
+detection:
+  detection_shots: 1024
+  high_shots: 8192        # AerSim reference for eps_pred computation
+  delta: 0.01             # target false-positive rate
+  # eps_Hoeffding = sqrt(2 * ln(2N/delta) / S) = 0.134123 at N=50, S=1024, delta=0.01
+
+backends:
+  reals:
+    - ibm_kingston
+    - ibm_fez
+    - ibm_marrakesh
+
+bootstrap:
+  n_boot: 2000
+  seed_pearson_r: 42
+  seed_rmse: 43
+  seed_epsilon_pred: 44
+  seed_paired_diff: 45
+  seed_margin_mean: 46
+
+attacks:
+  uniform_rho_values: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  single_param_rho_values: [0.2, 0.5, 0.8]
+  single_params: [T1, T2, gate, readout]
+  two_param_pairs: [[T1, T2], [gate, readout]]
+  two_param_rho_values: [0.5, 0.8]
+  random_direction_seed: 44
+  random_direction_count: 20
+  random_direction_magnitudes: [0.25, 0.5, 1.0]
+  # 9 + 12 + 4 + 60 = 85 attacks per anchor
+
+heldout_threshold:
+  n_predictor_instances: 30
+  synthetic_descriptor_seeds: [100, 101, 102, 103, 104]

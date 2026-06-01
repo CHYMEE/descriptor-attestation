@@ -1,0 +1,162 @@
+{
+  "task": "T1_binomial_cis",
+  "timestamp_utc": "2026-05-14T08:05:36.538467+00:00",
+  "conventions": {
+    "alpha": 0.05,
+    "wilson_iff": "n >= 20 AND k not in {0, n}",
+    "fallback": "clopper_pearson",
+    "implementation": "closed-form via scipy.stats.beta/norm (statsmodels not installed)"
+  },
+  "entries": [
+    {
+      "category": "attack_sweep:phase1_anchor:uniform_rho:detection_rate_per_device_eps",
+      "n": 9,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.3362671168799428,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase1_anchor:single_param:detection_rate_per_device_eps",
+      "n": 12,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.26464846939705117,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase1_anchor:two_param:detection_rate_per_device_eps",
+      "n": 4,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.6023646356164746,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase1_anchor:random_direction:detection_rate_per_device_eps",
+      "n": 60,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.059629492286166916,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:uniform_rho:detection_rate_per_device_eps",
+      "n": 9,
+      "k": 4,
+      "rate": 0.4444444444444444,
+      "ci_lo": 0.13699566226516646,
+      "ci_hi": 0.7879914932211319,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:single_param:detection_rate_per_device_eps",
+      "n": 12,
+      "k": 2,
+      "rate": 0.16666666666666666,
+      "ci_lo": 0.020862525460092374,
+      "ci_hi": 0.48413774868596715,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:two_param:detection_rate_per_device_eps",
+      "n": 4,
+      "k": 1,
+      "rate": 0.25,
+      "ci_lo": 0.006309463209709866,
+      "ci_hi": 0.8058795503167565,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:random_direction:detection_rate_per_device_eps",
+      "n": 60,
+      "k": 2,
+      "rate": 0.03333333333333333,
+      "ci_lo": 0.009189319256197877,
+      "ci_hi": 0.113637742743086,
+      "method": "wilson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "federation_type_I:per_device_eps:N=3",
+      "n": 3,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.7075982261787133,
+      "method": "clopper_pearson",
+      "source": "federation_per_device_epsilon.json (N=3 reconstructed from N=5 records)"
+    },
+    {
+      "category": "federation_type_I:per_device_eps:N=5",
+      "n": 5,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.5218237501049814,
+      "method": "clopper_pearson",
+      "source": "federation_per_device_epsilon.json"
+    },
+    {
+      "category": "federation_type_I:per_device_eps:N=8",
+      "n": 8,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.3694166475528192,
+      "method": "clopper_pearson",
+      "source": "federation_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase1_anchor:aggregate_detection_per_device_eps",
+      "n": 85,
+      "k": 0,
+      "rate": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.04247033991124916,
+      "method": "clopper_pearson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:aggregate_detection_per_device_eps",
+      "n": 85,
+      "k": 9,
+      "rate": 0.10588235294117647,
+      "ci_lo": 0.05671240711980652,
+      "ci_hi": 0.18913518600421056,
+      "method": "wilson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase1_anchor:detection_global_epsilon=0.134",
+      "n": 85,
+      "k": 2,
+      "rate": 0.023529411764705882,
+      "ci_lo": 0.006476511225947848,
+      "ci_hi": 0.0817869968792071,
+      "method": "wilson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    },
+    {
+      "category": "attack_sweep:phase2_anchor:detection_global_epsilon=0.134",
+      "n": 85,
+      "k": 20,
+      "rate": 0.23529411764705882,
+      "ci_lo": 0.15779538725698744,
+      "ci_hi": 0.3356843394680986,
+      "method": "wilson",
+      "source": "attack_sweep_per_device_epsilon.json"
+    }
+  ]
+}

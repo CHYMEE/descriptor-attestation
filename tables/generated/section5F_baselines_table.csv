@@ -1,0 +1,7 @@
+baseline,anchor,n,k,rate,ci_lo,ci_hi,method
+B0,phase1_anchor,85,0,0.000000,0.000000,0.042470,clopper_pearson
+B0,phase2_anchor,85,9,0.105882,0.056712,0.189135,wilson
+B2,phase1_anchor,85,2,0.023529,0.006477,0.081787,wilson
+B2,phase2_anchor,85,20,0.235294,0.157795,0.335684,wilson
+B3,phase1_anchor,85,16,0.188235,0.119321,0.284110,wilson
+B3,phase2_anchor,85,16,0.188235,0.119321,0.284110,wilson

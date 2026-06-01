@@ -1,0 +1,11 @@
+anchor,attack_family,n,k,rate,ci_lo,ci_hi,method
+phase1_anchor,uniform_rho,9,0,0.000000,0.000000,0.336267,clopper_pearson
+phase1_anchor,single_param,12,0,0.000000,0.000000,0.264648,clopper_pearson
+phase1_anchor,two_param,4,0,0.000000,0.000000,0.602365,clopper_pearson
+phase1_anchor,random_direction,60,0,0.000000,0.000000,0.059629,clopper_pearson
+phase1_anchor,AGGREGATE,85,0,0.000000,0.000000,0.042470,clopper_pearson
+phase2_anchor,uniform_rho,9,4,0.444444,0.136996,0.787991,clopper_pearson
+phase2_anchor,single_param,12,2,0.166667,0.020863,0.484138,clopper_pearson
+phase2_anchor,two_param,4,1,0.250000,0.006309,0.805880,clopper_pearson
+phase2_anchor,random_direction,60,2,0.033333,0.009189,0.113638,wilson
+phase2_anchor,AGGREGATE,85,9,0.105882,0.056712,0.189135,wilson

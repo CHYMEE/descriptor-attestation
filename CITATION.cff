@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "descriptor-attestation: reproduction code for descriptor attestation of federated quantum calibration"
+message: "If you use this software or the cached results from this repository, please cite the associated paper and the software via the DOI below."
+authors:
+  - given-names: "Anonymous"
+    family-names: "Anonymous"
+    affiliation: "see paper"
+version: 0.1.0
+date-released: "2026-06-01"
+license: MIT
+repository-code: "https://github.com/CHYMEE/descriptor-attestation"
+url: "https://github.com/CHYMEE/descriptor-attestation"
+keywords:
+  - "quantum error mitigation"
+  - "verification"
+  - "federated quantum computing"
+  - "witness circuits"
+# After uploading to Zenodo, replace `doi: TBD` with the Zenodo-issued DOI
+# and add `identifiers:` block (see docs/zenodo_release_checklist.md).
+doi: "TBD"
+preferred-citation:
+  type: article
+  title: "Descriptor attestation for federated quantum calibration"
+  authors:
+    - given-names: "Anonymous"
+      family-names: "Anonymous"
+  journal: "Quantum Science and Technology"
+  year: 2026
+  doi: "TBD"

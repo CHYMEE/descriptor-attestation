@@ -1,0 +1,39 @@
+{
+  "task": "T4_fez_completeness_per_baseline",
+  "timestamp_utc": "2026-05-15T07:50:36.070559+00:00",
+  "source": "results/phase3/completeness_analysis/per_device_epsilon_demo.json (Fez values)",
+  "entries": [
+    {
+      "baseline": "B0",
+      "device": "ibm_fez",
+      "epsilon_device_fez": 0.18086862564086914,
+      "max_dev_hw_fez": 0.18086862564086914,
+      "margin": 0.0,
+      "passes_in_sample": true,
+      "note": "per-device-eps construction; in-sample margin = 0 by design (eps_device(Fez) absorbs eps_pred + eps_model + eps_Hoeffding)"
+    },
+    {
+      "baseline": "B2",
+      "device": "ibm_fez",
+      "epsilon_device_fez": 0.1341228766430842,
+      "max_dev_hw_fez": 0.18086862564086914,
+      "margin": -0.04674574899778494,
+      "passes_in_sample": false,
+      "note": "bare Hoeffding bound eps_H = 0.1341; Fez max_dev_hw = 0.1809 exceeds eps_H by 0.0468, so B2 fails completeness on Fez"
+    },
+    {
+      "baseline": "B3",
+      "device": "ibm_fez",
+      "epsilon_stricker": 0.02835798329114914,
+      "mean_stricker_stat_fez_honest": 0.024538535620085896,
+      "max_stricker_stat_fez_honest": 0.027138380031101406,
+      "min_stricker_stat_fez_honest": 0.019232945698313415,
+      "n_cal_runs_fez": 20,
+      "margin": 0.001219603260047733,
+      "passes_in_sample": true,
+      "note": "B3 uses one global eps_stricker calibrated to FPR <= 5% on the pooled honest baseline. Fez completeness = whether all Fez honest calibration runs produce stat <= eps_stricker."
+    }
+  ],
+  "timestamp_utc_b3_appended": "2026-05-18T01:57:28.740989+00:00",
+  "b3_dry_run": null
+}

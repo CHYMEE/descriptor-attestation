@@ -1,0 +1,4 @@
+N,n_device_evals,k_flagged,type_I_rate,wilson_upper,passes
+3,90,23,0.255556,0.354376,False
+5,150,23,0.153333,0.219580,False
+8,240,23,0.095833,0.139692,False

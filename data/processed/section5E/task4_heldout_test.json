@@ -1,0 +1,20 @@
+{
+  "task": "T4_heldout_test",
+  "timestamp_utc": "2026-05-14T08:38:41.054730+00:00",
+  "rule": "epsilon_model_heldout = max(epsilon_model(Kingston), epsilon_model(Marrakesh))",
+  "calibration_devices": [
+    "ibm_kingston",
+    "ibm_marrakesh"
+  ],
+  "test_device": "ibm_fez",
+  "epsilon_model_kingston": 0.0,
+  "epsilon_model_marrakesh": 0.0,
+  "epsilon_model_heldout": 0.0,
+  "epsilon_pred_fez": 0.03756578639149666,
+  "epsilon_hoeffding": 0.1341228766430842,
+  "epsilon_device_heldout_fez": 0.17168866303458086,
+  "max_dev_hw_fez": 0.18086862564086914,
+  "margin": -0.009179962606288283,
+  "passes_heldout": false,
+  "source": "<repo>/results\\phase3\\completeness_analysis\\per_device_epsilon_demo.json"
+}

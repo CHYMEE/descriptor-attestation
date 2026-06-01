@@ -1,0 +1,215 @@
+{
+  "task": "T4_replicated_heldout_30_instances",
+  "timestamp_utc": "2026-05-14T09:31:01.082907+00:00",
+  "n_trials": 30,
+  "n_pass": 0,
+  "n_fail": 30,
+  "fail_fraction": 1.0,
+  "fail_fraction_wilson_95ci": [
+    0.8864866068260312,
+    0.9999999999999999
+  ],
+  "single_instance_reference_margin": -0.0092,
+  "single_instance_reference_passes_heldout": false,
+  "margin_distribution": {
+    "mean": -0.019507956172458617,
+    "median": -0.01927234259725341,
+    "std": 0.00669079612454498,
+    "min": -0.03308916817710528,
+    "max": -0.00580741445825228,
+    "values": [
+      -0.02888441625342497,
+      -0.011373225406862586,
+      -0.01310332612425813,
+      -0.03308916817710528,
+      -0.01403059232339987,
+      -0.0179821846942676,
+      -0.029103751567311376,
+      -0.019016230286218017,
+      -0.012884750769592612,
+      -0.02846739608154425,
+      -0.017930304904587357,
+      -0.01203038710460791,
+      -0.007493227527595847,
+      -0.022984560386396735,
+      -0.020721265853501647,
+      -0.017169972223348706,
+      -0.02107061240182051,
+      -0.02834639120206961,
+      -0.01459708231792578,
+      -0.027181552996046632,
+      -0.019143977009810298,
+      -0.01620388384268412,
+      -0.019400708184696525,
+      -0.026244101853228896,
+      -0.00580741445825228,
+      -0.021825576939739078,
+      -0.022410120622373908,
+      -0.014958968193389266,
+      -0.019870608852363913,
+      -0.021912926615334838
+    ],
+    "bootstrap_mean_ci_95": [
+      -0.02178233673544083,
+      -0.01718852031141933
+    ],
+    "bootstrap_config": {
+      "B": 2000,
+      "seed": 46,
+      "method": "percentile"
+    }
+  },
+  "per_trial": [
+    {
+      "trial_idx": 0,
+      "margin": -0.02888441625342497,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 1,
+      "margin": -0.011373225406862586,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 2,
+      "margin": -0.01310332612425813,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 3,
+      "margin": -0.03308916817710528,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 4,
+      "margin": -0.01403059232339987,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 5,
+      "margin": -0.0179821846942676,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 6,
+      "margin": -0.029103751567311376,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 7,
+      "margin": -0.019016230286218017,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 8,
+      "margin": -0.012884750769592612,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 9,
+      "margin": -0.02846739608154425,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 10,
+      "margin": -0.017930304904587357,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 11,
+      "margin": -0.01203038710460791,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 12,
+      "margin": -0.007493227527595847,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 13,
+      "margin": -0.022984560386396735,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 14,
+      "margin": -0.020721265853501647,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 15,
+      "margin": -0.017169972223348706,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 16,
+      "margin": -0.02107061240182051,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 17,
+      "margin": -0.02834639120206961,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 18,
+      "margin": -0.01459708231792578,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 19,
+      "margin": -0.027181552996046632,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 20,
+      "margin": -0.019143977009810298,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 21,
+      "margin": -0.01620388384268412,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 22,
+      "margin": -0.019400708184696525,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 23,
+      "margin": -0.026244101853228896,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 24,
+      "margin": -0.00580741445825228,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 25,
+      "margin": -0.021825576939739078,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 26,
+      "margin": -0.022410120622373908,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 27,
+      "margin": -0.014958968193389266,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 28,
+      "margin": -0.019870608852363913,
+      "passes_heldout": false
+    },
+    {
+      "trial_idx": 29,
+      "margin": -0.021912926615334838,
+      "passes_heldout": false
+    }
+  ],
+  "interpretation_note": "Each trial uses a fresh predictor instance (unseeded AerSim shot RNG). \u03b5_model values per device are recomputed per trial from max(0, max_dev_hw \u2212 \u03b5_H \u2212 \u03b5_pred). Held-out rule = max(K_model, M_model). Fez is the test device."
+}

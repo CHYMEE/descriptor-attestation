@@ -1,0 +1,1639 @@
+{
+  "experiment": "phase3_F1_attack_sweep_per_device_epsilon",
+  "timestamp_utc": "2026-05-14T02:44:17.530776+00:00",
+  "config": {
+    "sampler": "sample_descriptors_deployment",
+    "train_descriptors": 100,
+    "train_shots": 2048,
+    "delta": 0.01,
+    "epsilon_Hoeffding": 0.1341228766430842,
+    "epsilon_device_real": {
+      "ibm_kingston": 0.1641228766430842,
+      "ibm_fez": 0.1851228766430842,
+      "ibm_marrakesh": 0.1751228766430842
+    },
+    "anchor_device": {
+      "phase1_anchor": "ibm_kingston",
+      "phase2_anchor": "ibm_kingston"
+    }
+  },
+  "source": "<repo>/results\\phase2\\20260513T043930Z_attack_sweep",
+  "per_anchor": {
+    "phase1_anchor": {
+      "anchor": "phase1_anchor",
+      "anchor_device": "ibm_kingston",
+      "epsilon_device": 0.1641228766430842,
+      "epsilon_global": 0.1341228766430842,
+      "n_attacks": 85,
+      "n_undetected_per_dev_eps": 85,
+      "n_undetected_global_eps": 83,
+      "overall_detection_rate_per_dev_eps": 0.0,
+      "overall_detection_rate_global_eps": 0.0235,
+      "by_type": {
+        "uniform_rho": {
+          "total": 9,
+          "undet_per_dev_eps": 9,
+          "undet_global_eps": 8,
+          "detection_rate_per_dev_eps": 0.0,
+          "detection_rate_global_eps": 0.1111
+        },
+        "single_param": {
+          "total": 12,
+          "undet_per_dev_eps": 12,
+          "undet_global_eps": 11,
+          "detection_rate_per_dev_eps": 0.0,
+          "detection_rate_global_eps": 0.0833
+        },
+        "two_param": {
+          "total": 4,
+          "undet_per_dev_eps": 4,
+          "undet_global_eps": 4,
+          "detection_rate_per_dev_eps": 0.0,
+          "detection_rate_global_eps": 0.0
+        },
+        "random_direction": {
+          "total": 60,
+          "undet_per_dev_eps": 60,
+          "undet_global_eps": 60,
+          "detection_rate_per_dev_eps": 0.0,
+          "detection_rate_global_eps": 0.0
+        }
+      },
+      "records": [
+        {
+          "attack_id": "uniform_rho_0.20",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.14630773742084136,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.30",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.13371257601741093,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.40",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.1211174146139804,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.50",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.10852225321054998,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.60",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.09592709180711945,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.70",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.08333193040368903,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.80",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.07591344971018582,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_0.90",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.07352119982480108,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_1.00",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.07112894993941636,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.08503222694243479,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.07913035721719569,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.07285739578899329,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.07884062952446672,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.07594874967968115,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.0730568698348956,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.07112857528907457,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.07112871578295274,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.07112885627683091,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_readout_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.1547007238404281,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "single_readout_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.11376786972279163,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_readout_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.07283501560515515,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_T1_T2_rho_0.50",
+          "attack_type": "two_param",
+          "max_deviation": 0.0799746858541733,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_T1_T2_rho_0.80",
+          "attack_type": "two_param",
+          "max_deviation": 0.07466724430531914,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_gate_readout_rho_0.50",
+          "attack_type": "two_param",
+          "max_deviation": 0.11376606895184882,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_gate_readout_rho_0.80",
+          "attack_type": "two_param",
+          "max_deviation": 0.07283429529677798,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_00_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07002076662737824,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_00_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06891258331534014,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_00_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06669621669126394,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07152419086126413,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07191943178415637,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0727252012068802,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07020991973456843,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0692908895297205,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07267034449274778,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_03_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07072959831315186,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_03_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07033024668688734,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_03_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06994027117277513,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_04_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06901659452033226,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_04_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0673003620594173,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_04_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06710752395516045,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07159022386817934,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07205149779694232,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07297404565446827,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07005776117576276,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06898657241210915,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06684419488480194,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07072331732327025,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07031768470712414,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06971359462769901,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06873975890389374,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06635056786941557,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06345197450123238,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07296926035873316,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07480957077909445,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07849747440331496,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_10_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07340986259949758,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_10_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07766898678404188,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_10_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10979152737468634,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_11_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07055168956077684,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_11_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06997442918213734,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_11_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0688199084248583,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07044790500323793,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06976686006810397,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07008186463901614,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0698096662724439,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06849038260651591,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06585181527465993,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07132715670243639,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07152536346650087,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07192177699462987,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06954344572202982,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06795794150568774,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06700243692418553,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07065281302556217,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07017667611170798,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06976827438905187,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_17_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07044444285013726,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_17_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.06975993576085815,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_17_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.071780501969546,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.0723360446067644,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07354313927515692,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07597115499831078,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_19_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07236877707197711,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_19_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.07532767134328766,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_19_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10510889649443955,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        }
+      ]
+    },
+    "phase2_anchor": {
+      "anchor": "phase2_anchor",
+      "anchor_device": "ibm_kingston",
+      "epsilon_device": 0.1641228766430842,
+      "epsilon_global": 0.1341228766430842,
+      "n_attacks": 85,
+      "n_undetected_per_dev_eps": 76,
+      "n_undetected_global_eps": 65,
+      "overall_detection_rate_per_dev_eps": 0.1059,
+      "overall_detection_rate_global_eps": 0.2353,
+      "by_type": {
+        "uniform_rho": {
+          "total": 9,
+          "undet_per_dev_eps": 5,
+          "undet_global_eps": 2,
+          "detection_rate_per_dev_eps": 0.4444,
+          "detection_rate_global_eps": 0.7778
+        },
+        "single_param": {
+          "total": 12,
+          "undet_per_dev_eps": 10,
+          "undet_global_eps": 9,
+          "detection_rate_per_dev_eps": 0.1667,
+          "detection_rate_global_eps": 0.25
+        },
+        "two_param": {
+          "total": 4,
+          "undet_per_dev_eps": 3,
+          "undet_global_eps": 2,
+          "detection_rate_per_dev_eps": 0.25,
+          "detection_rate_global_eps": 0.5
+        },
+        "random_direction": {
+          "total": 60,
+          "undet_per_dev_eps": 58,
+          "undet_global_eps": 52,
+          "detection_rate_per_dev_eps": 0.0333,
+          "detection_rate_global_eps": 0.1333
+        }
+      },
+      "records": [
+        {
+          "attack_id": "uniform_rho_0.20",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.19391483020867117,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.30",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.1846154026997865,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.40",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.1753159751909018,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.50",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.16601654768201712,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.60",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.15671712017313255,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.70",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.14741769266424787,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.80",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.13811826515536318,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "uniform_rho_0.90",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.1288188376464785,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "uniform_rho_1.00",
+          "attack_type": "uniform_rho",
+          "max_deviation": 0.11951941013759393,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.10956453781152753,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.1125947612625644,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T1_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.11669820036046874,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.12193638608278312,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.12103002010333719,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_T2_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.12012365412389125,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.11951584232636436,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.11951718025557545,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_gate_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.11951851818478654,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "single_readout_rho_0.20",
+          "attack_type": "single_param",
+          "max_deviation": 0.20299930953698386,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "single_readout_rho_0.50",
+          "attack_type": "single_param",
+          "max_deviation": 0.17169434726221267,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "single_readout_rho_0.80",
+          "attack_type": "single_param",
+          "max_deviation": 0.14038938498744136,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "two_T1_T2_rho_0.50",
+          "attack_type": "two_param",
+          "max_deviation": 0.11384384043941687,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_T1_T2_rho_0.80",
+          "attack_type": "two_param",
+          "max_deviation": 0.11724918225832315,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "two_gate_readout_rho_0.50",
+          "attack_type": "two_param",
+          "max_deviation": 0.1716921173801942,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "two_gate_readout_rho_0.80",
+          "attack_type": "two_param",
+          "max_deviation": 0.14038849303463397,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_00_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11825993548804625,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_00_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11700046083849847,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_00_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11449213174913431,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11895075492162832,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11838209970566282,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_01_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11724478927373172,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12488969182716814,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.13026471364964887,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_02_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.14110481198850777,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_03_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12405150077765459,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_03_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12858359141771525,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_03_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.13764957430741975,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_04_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11701315589102024,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_04_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11450690164444666,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_04_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10947779319492057,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10766024238555305,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.09584685319441233,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_05_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.09011295095568403,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11003618041149799,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10055295068540204,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_06_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.08738102744989466,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.1148508263907837,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11024156754912606,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_07_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10105851978746216,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11123994662128422,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10296048310497452,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_08_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.08952542694116604,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.123518798563784,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12751818698997408,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_09_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.13551696384235434,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_10_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.13171078566127303,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_10_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.14390216118495225,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_10_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.16832154611368488,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_11_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12136191701119659,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_11_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12320442388479924,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_11_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12694012009919664,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12045103012920322,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.1213826501208124,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_12_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12324118492785219,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12143341396240825,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12334741778722247,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_13_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12717542543685112,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11547090764667556,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11142240515575708,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_14_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10332540017392033,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12022045869334197,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12092150724909001,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_15_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12231666566101562,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12420115954250954,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12888290894742516,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_16_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.1382464077572565,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_17_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11446647383243302,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_17_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.10941353752727212,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_17_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.09929533004277646,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11975548045564488,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.11999155077369583,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_18_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.12046369140979785,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_19_mag_0.25",
+          "attack_type": "random_direction",
+          "max_deviation": 0.13107901247075904,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": false,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": true
+        },
+        {
+          "attack_id": "random_dir_19_mag_0.50",
+          "attack_type": "random_direction",
+          "max_deviation": 0.14263861480392426,
+          "flagged_per_device_epsilon": false,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": true,
+          "attack_undetected_global_epsilon": false
+        },
+        {
+          "attack_id": "random_dir_19_mag_1.00",
+          "attack_type": "random_direction",
+          "max_deviation": 0.1657578194702547,
+          "flagged_per_device_epsilon": true,
+          "flagged_global_epsilon": true,
+          "attack_undetected_per_device_epsilon": false,
+          "attack_undetected_global_epsilon": false
+        }
+      ]
+    }
+  }
+}

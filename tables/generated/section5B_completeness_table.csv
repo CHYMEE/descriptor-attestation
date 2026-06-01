@@ -1,0 +1,4 @@
+device,eps_pred,eps_model,eps_device,max_dev_hw,margin,verdict
+ibm_kingston,0.035722,0.000000,0.169845,0.119287,+0.050558,Pass
+ibm_fez,0.037566,0.009180,0.180869,0.180869,+0.000000,Pass
+ibm_marrakesh,0.038625,0.000000,0.172748,0.123293,+0.049455,Pass

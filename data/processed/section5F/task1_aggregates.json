@@ -1,0 +1,69 @@
+{
+  "task": "T1_aggregates_B0_B2",
+  "timestamp_utc": "2026-05-15T07:50:36.070559+00:00",
+  "source": "results/phase3/final_results/attack_sweep_per_device_epsilon.json",
+  "entries": [
+    {
+      "baseline": "B0",
+      "anchor": "phase1_anchor",
+      "n": 85,
+      "k": 0,
+      "rate": 0.0,
+      "ci_95_lo": 0.0,
+      "ci_95_hi": 0.04247033991124916,
+      "method": "clopper_pearson"
+    },
+    {
+      "baseline": "B0",
+      "anchor": "phase2_anchor",
+      "n": 85,
+      "k": 9,
+      "rate": 0.10588235294117647,
+      "ci_95_lo": 0.05671240711980652,
+      "ci_95_hi": 0.18913518600421056,
+      "method": "wilson"
+    },
+    {
+      "baseline": "B2",
+      "anchor": "phase1_anchor",
+      "n": 85,
+      "k": 2,
+      "rate": 0.023529411764705882,
+      "ci_95_lo": 0.006476511225947855,
+      "ci_95_hi": 0.0817869968792071,
+      "method": "wilson"
+    },
+    {
+      "baseline": "B2",
+      "anchor": "phase2_anchor",
+      "n": 85,
+      "k": 20,
+      "rate": 0.23529411764705882,
+      "ci_95_lo": 0.15779538725698744,
+      "ci_95_hi": 0.3356843394680986,
+      "method": "wilson"
+    },
+    {
+      "baseline": "B3",
+      "anchor": "phase1_anchor",
+      "n": 85,
+      "k": 16,
+      "rate": 0.18823529411764706,
+      "ci_95_lo": 0.1193214344488493,
+      "ci_95_hi": 0.2841102436940299,
+      "method": "wilson"
+    },
+    {
+      "baseline": "B3",
+      "anchor": "phase2_anchor",
+      "n": 85,
+      "k": 16,
+      "rate": 0.18823529411764706,
+      "ci_95_lo": 0.1193214344488493,
+      "ci_95_hi": 0.2841102436940299,
+      "method": "wilson"
+    }
+  ],
+  "timestamp_utc_b3_appended": "2026-05-18T01:57:28.740989+00:00",
+  "b3_dry_run": null
+}

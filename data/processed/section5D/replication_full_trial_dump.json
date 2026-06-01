@@ -1,0 +1,6144 @@
+{
+  "task": "section5A_replication_full_trial_dump",
+  "timestamp_utc": "2026-05-14T09:31:01.083603+00:00",
+  "n_trials": 30,
+  "config": {
+    "witness_seed": 42,
+    "predictor_desc_seed": 43,
+    "sim_desc_seed_base": 45,
+    "train_descriptors": 100,
+    "train_shots": 2048,
+    "detection_shots": 1024,
+    "high_shots": 8192,
+    "delta_hoeffding": 0.01,
+    "epsilon_hoeffding": 0.1341228766430842,
+    "epsilon_device_real_apriori": {
+      "ibm_kingston": 0.1641228766430842,
+      "ibm_fez": 0.1851228766430842,
+      "ibm_marrakesh": 0.1751228766430842
+    }
+  },
+  "per_trial": [
+    {
+      "trial_idx": 0,
+      "sim_desc_seed": 45,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.025794696994125843,
+          "max_dev_hw": 0.11474108695983887,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.02459033951163292,
+          "max_dev_hw": 0.1875976324081421,
+          "eps_model": 0.02888441625342497
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.02963520772755146,
+          "max_dev_hw": 0.13679301738739014,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.02459033951163292,
+        "eps_device_heldout_fez": 0.15871321615471712,
+        "max_dev_hw_fez": 0.1875976324081421,
+        "margin": -0.02888441625342497,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474108695983887,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1875976324081421,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13679301738739014,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474108695983887,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1875976324081421,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13679301738739014,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08957891585305333,
+              "eps_device_apriori": 0.15963729769631496,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09966418705880642,
+              "eps_device_apriori": 0.16570010800554624,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474108695983887,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1875976324081421,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13679301738739014,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08957891585305333,
+              "eps_device_apriori": 0.15963729769631496,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09966418705880642,
+              "eps_device_apriori": 0.16570010800554624,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.06637072376906872,
+              "eps_device_apriori": 0.16779941525950304,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06594986841082573,
+              "eps_device_apriori": 0.1837015330855476,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.10694281198084354,
+              "eps_device_apriori": 0.1703994052548634,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.025514421053230762,
+          "eps_device": 0.15963729769631496,
+          "max_dev_hw": 0.08957891585305333,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031577231362462044,
+          "eps_device": 0.16570010800554624,
+          "max_dev_hw": 0.09966418705880642,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03367653861641884,
+          "eps_device": 0.16779941525950304,
+          "max_dev_hw": 0.06637072376906872,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.0495786564424634,
+          "eps_device": 0.1837015330855476,
+          "max_dev_hw": 0.06594986841082573,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03627652861177921,
+          "eps_device": 0.1703994052548634,
+          "max_dev_hw": 0.10694281198084354,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 79.0
+    },
+    {
+      "trial_idx": 1,
+      "sim_desc_seed": 46,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.029990018345415592,
+          "max_dev_hw": 0.11291521787643433,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03995206765830517,
+          "max_dev_hw": 0.18544816970825195,
+          "eps_model": 0.011373225406862586
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03729584440588951,
+          "max_dev_hw": 0.14197015762329102,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03995206765830517,
+        "eps_device_heldout_fez": 0.17407494430138937,
+        "max_dev_hw_fez": 0.18544816970825195,
+        "margin": -0.011373225406862586,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11291521787643433,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18544816970825195,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.14197015762329102,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11291521787643433,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18544816970825195,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.14197015762329102,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07350180111825466,
+              "eps_device_apriori": 0.1613991746742951,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07597783533856273,
+              "eps_device_apriori": 0.1669669041474091,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11291521787643433,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18544816970825195,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.14197015762329102,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07350180111825466,
+              "eps_device_apriori": 0.1613991746742951,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07597783533856273,
+              "eps_device_apriori": 0.1669669041474091,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09727555233985186,
+              "eps_device_apriori": 0.16782284174754492,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06242658942937851,
+              "eps_device_apriori": 0.17324952008842698,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.09648327715694904,
+              "eps_device_apriori": 0.1596603223186659,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.0272762980312109,
+          "eps_device": 0.1613991746742951,
+          "max_dev_hw": 0.07350180111825466,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03284402750432491,
+          "eps_device": 0.1669669041474091,
+          "max_dev_hw": 0.07597783533856273,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.033699965104460716,
+          "eps_device": 0.16782284174754492,
+          "max_dev_hw": 0.09727555233985186,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03912664344534278,
+          "eps_device": 0.17324952008842698,
+          "max_dev_hw": 0.06242658942937851,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.025537445675581694,
+          "eps_device": 0.1596603223186659,
+          "max_dev_hw": 0.09648327715694904,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 77.9
+    },
+    {
+      "trial_idx": 2,
+      "sim_desc_seed": 47,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03275864198803902,
+          "max_dev_hw": 0.11287873983383179,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03774095745757222,
+          "max_dev_hw": 0.18496716022491455,
+          "eps_model": 0.01310332612425813
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.024354164488613605,
+          "max_dev_hw": 0.13066768646240234,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03774095745757222,
+        "eps_device_heldout_fez": 0.17186383410065642,
+        "max_dev_hw_fez": 0.18496716022491455,
+        "margin": -0.01310332612425813,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11287873983383179,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18496716022491455,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13066768646240234,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11287873983383179,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18496716022491455,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13066768646240234,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07558402605354786,
+              "eps_device_apriori": 0.16135361530526748,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0770991975441575,
+              "eps_device_apriori": 0.16220767535909286,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11287873983383179,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18496716022491455,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13066768646240234,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07558402605354786,
+              "eps_device_apriori": 0.16135361530526748,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0770991975441575,
+              "eps_device_apriori": 0.16220767535909286,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.11083738878369331,
+              "eps_device_apriori": 0.17364501599862447,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07871934212744236,
+              "eps_device_apriori": 0.1603307325456964,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07181510049849749,
+              "eps_device_apriori": 0.16711782869591585,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.027230738662183285,
+          "eps_device": 0.16135361530526748,
+          "max_dev_hw": 0.07558402605354786,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.028084798716008663,
+          "eps_device": 0.16220767535909286,
+          "max_dev_hw": 0.0770991975441575,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.039522139355540276,
+          "eps_device": 0.17364501599862447,
+          "max_dev_hw": 0.11083738878369331,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02620785590261221,
+          "eps_device": 0.1603307325456964,
+          "max_dev_hw": 0.07871934212744236,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03299495205283165,
+          "eps_device": 0.16711782869591585,
+          "max_dev_hw": 0.07181510049849749,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 77.1
+    },
+    {
+      "trial_idx": 3,
+      "sim_desc_seed": 48,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.025709780864417553,
+          "max_dev_hw": 0.11556422710418701,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.020692789927124977,
+          "max_dev_hw": 0.18790483474731445,
+          "eps_model": 0.03308916817710528
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03055010922253132,
+          "max_dev_hw": 0.1344648003578186,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.020692789927124977,
+        "eps_device_heldout_fez": 0.15481566657020918,
+        "max_dev_hw_fez": 0.18790483474731445,
+        "margin": -0.03308916817710528,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11556422710418701,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18790483474731445,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1344648003578186,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11556422710418701,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18790483474731445,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1344648003578186,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09283131919801235,
+              "eps_device_apriori": 0.1544561537046658,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07926851802039891,
+              "eps_device_apriori": 0.16244494189216963,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11556422710418701,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18790483474731445,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1344648003578186,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09283131919801235,
+              "eps_device_apriori": 0.1544561537046658,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07926851802039891,
+              "eps_device_apriori": 0.16244494189216963,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09732961840927601,
+              "eps_device_apriori": 0.17094687019183508,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0654473165050149,
+              "eps_device_apriori": 0.16749149859591594,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.05723944865167141,
+              "eps_device_apriori": 0.1858126057375895,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.02033327706158161,
+          "eps_device": 0.1544561537046658,
+          "max_dev_hw": 0.09283131919801235,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.028322065249085426,
+          "eps_device": 0.16244494189216963,
+          "max_dev_hw": 0.07926851802039891,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03682399354875088,
+          "eps_device": 0.17094687019183508,
+          "max_dev_hw": 0.09732961840927601,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.033368621952831745,
+          "eps_device": 0.16749149859591594,
+          "max_dev_hw": 0.0654473165050149,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.05168972909450531,
+          "eps_device": 0.1858126057375895,
+          "max_dev_hw": 0.05723944865167141,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 4,
+      "sim_desc_seed": 49,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03030228801071644,
+          "max_dev_hw": 0.11707735061645508,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.038831427693367004,
+          "max_dev_hw": 0.18698489665985107,
+          "eps_model": 0.01403059232339987
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.032659648917615414,
+          "max_dev_hw": 0.12886136770248413,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.038831427693367004,
+        "eps_device_heldout_fez": 0.1729543043364512,
+        "max_dev_hw_fez": 0.18698489665985107,
+        "margin": -0.01403059232339987,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11707735061645508,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18698489665985107,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12886136770248413,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11707735061645508,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18698489665985107,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12886136770248413,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.05943465605378151,
+              "eps_device_apriori": 0.16716603022708765,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0953741674311459,
+              "eps_device_apriori": 0.17739298586442342,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11707735061645508,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18698489665985107,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12886136770248413,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.05943465605378151,
+              "eps_device_apriori": 0.16716603022708765,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0953741674311459,
+              "eps_device_apriori": 0.17739298586442342,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09053673408925533,
+              "eps_device_apriori": 0.17112636212899557,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08841677382588387,
+              "eps_device_apriori": 0.16945590098097196,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07414045557379723,
+              "eps_device_apriori": 0.16065591034188142,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03304315358400345,
+          "eps_device": 0.16716603022708765,
+          "max_dev_hw": 0.05943465605378151,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.043270109221339226,
+          "eps_device": 0.17739298586442342,
+          "max_dev_hw": 0.0953741674311459,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03700348548591137,
+          "eps_device": 0.17112636212899557,
+          "max_dev_hw": 0.09053673408925533,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.035333024337887764,
+          "eps_device": 0.16945590098097196,
+          "max_dev_hw": 0.08841677382588387,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.026533033698797226,
+          "eps_device": 0.16065591034188142,
+          "max_dev_hw": 0.07414045557379723,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.6
+    },
+    {
+      "trial_idx": 5,
+      "sim_desc_seed": 50,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.04829835891723633,
+          "max_dev_hw": 0.11746776103973389,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03475502319633961,
+          "max_dev_hw": 0.1868600845336914,
+          "eps_model": 0.0179821846942676
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.049102650955319405,
+          "max_dev_hw": 0.1303708553314209,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03475502319633961,
+        "eps_device_heldout_fez": 0.1688778998394238,
+        "max_dev_hw_fez": 0.1868600845336914,
+        "margin": -0.0179821846942676,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746776103973389,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868600845336914,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303708553314209,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746776103973389,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868600845336914,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303708553314209,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08720125071704388,
+              "eps_device_apriori": 0.1704244932223784,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08047924470156431,
+              "eps_device_apriori": 0.16698382814123502,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746776103973389,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868600845336914,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303708553314209,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08720125071704388,
+              "eps_device_apriori": 0.1704244932223784,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08047924470156431,
+              "eps_device_apriori": 0.16698382814123502,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09781749732792377,
+              "eps_device_apriori": 0.160076994641565,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08547857869416475,
+              "eps_device_apriori": 0.18025679346814028,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.092881687451154,
+              "eps_device_apriori": 0.17151391897990576,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.036301616579294205,
+          "eps_device": 0.1704244932223784,
+          "max_dev_hw": 0.08720125071704388,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.032860951498150826,
+          "eps_device": 0.16698382814123502,
+          "max_dev_hw": 0.08047924470156431,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.025954117998480797,
+          "eps_device": 0.160076994641565,
+          "max_dev_hw": 0.09781749732792377,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.046133916825056076,
+          "eps_device": 0.18025679346814028,
+          "max_dev_hw": 0.08547857869416475,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.037391042336821556,
+          "eps_device": 0.17151391897990576,
+          "max_dev_hw": 0.092881687451154,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 6,
+      "sim_desc_seed": 51,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.028629131615161896,
+          "max_dev_hw": 0.11826962232589722,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.0260662198998034,
+          "max_dev_hw": 0.18929284811019897,
+          "eps_model": 0.029103751567311376
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03364299423992634,
+          "max_dev_hw": 0.13339847326278687,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.0260662198998034,
+        "eps_device_heldout_fez": 0.1601890965428876,
+        "max_dev_hw_fez": 0.18929284811019897,
+        "margin": -0.029103751567311376,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11826962232589722,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18929284811019897,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13339847326278687,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11826962232589722,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18929284811019897,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13339847326278687,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.0817616549320519,
+              "eps_device_apriori": 0.16874143779917827,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0949322571977973,
+              "eps_device_apriori": 0.16524907034530512,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11826962232589722,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18929284811019897,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13339847326278687,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.0817616549320519,
+              "eps_device_apriori": 0.16874143779917827,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0949322571977973,
+              "eps_device_apriori": 0.16524907034530512,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07176331710070372,
+              "eps_device_apriori": 0.16563226301863065,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07019232772290707,
+              "eps_device_apriori": 0.16657528114213815,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.06858623353764415,
+              "eps_device_apriori": 0.1608801316068249,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.034618561156094074,
+          "eps_device": 0.16874143779917827,
+          "max_dev_hw": 0.0817616549320519,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031126193702220917,
+          "eps_device": 0.16524907034530512,
+          "max_dev_hw": 0.0949322571977973,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.031509386375546455,
+          "eps_device": 0.16563226301863065,
+          "max_dev_hw": 0.07176331710070372,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.032452404499053955,
+          "eps_device": 0.16657528114213815,
+          "max_dev_hw": 0.07019232772290707,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.026757254963740706,
+          "eps_device": 0.1608801316068249,
+          "max_dev_hw": 0.06858623353764415,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.6
+    },
+    {
+      "trial_idx": 7,
+      "sim_desc_seed": 52,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.028865136206150055,
+          "max_dev_hw": 0.11622965335845947,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.02944142371416092,
+          "max_dev_hw": 0.18258053064346313,
+          "eps_model": 0.019016230286218017
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.040613701567053795,
+          "max_dev_hw": 0.12801969051361084,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.02944142371416092,
+        "eps_device_heldout_fez": 0.16356430035724512,
+        "max_dev_hw_fez": 0.18258053064346313,
+        "margin": -0.019016230286218017,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11622965335845947,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18258053064346313,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12801969051361084,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11622965335845947,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18258053064346313,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12801969051361084,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08764103194698691,
+              "eps_device_apriori": 0.16366923992230764,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.06276937667280436,
+              "eps_device_apriori": 0.16561161466582885,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11622965335845947,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18258053064346313,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12801969051361084,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08764103194698691,
+              "eps_device_apriori": 0.16366923992230764,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.06276937667280436,
+              "eps_device_apriori": 0.16561161466582885,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09908514679409564,
+              "eps_device_apriori": 0.16930397153540722,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08399295248091221,
+              "eps_device_apriori": 0.17040718878328076,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0652902852743864,
+              "eps_device_apriori": 0.1662909390468823,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.029546363279223442,
+          "eps_device": 0.16366923992230764,
+          "max_dev_hw": 0.08764103194698691,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031488738022744656,
+          "eps_device": 0.16561161466582885,
+          "max_dev_hw": 0.06276937667280436,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03518109489232302,
+          "eps_device": 0.16930397153540722,
+          "max_dev_hw": 0.09908514679409564,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03628431214019656,
+          "eps_device": 0.17040718878328076,
+          "max_dev_hw": 0.08399295248091221,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.0321680624037981,
+          "eps_device": 0.1662909390468823,
+          "max_dev_hw": 0.0652902852743864,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 8,
+      "sim_desc_seed": 53,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03607718273997307,
+          "max_dev_hw": 0.1185464859008789,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.040801482275128365,
+          "max_dev_hw": 0.18780910968780518,
+          "eps_model": 0.012884750769592612
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03716930188238621,
+          "max_dev_hw": 0.12992507219314575,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.040801482275128365,
+        "eps_device_heldout_fez": 0.17492435891821256,
+        "max_dev_hw_fez": 0.18780910968780518,
+        "margin": -0.012884750769592612,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1185464859008789,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18780910968780518,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12992507219314575,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1185464859008789,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18780910968780518,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12992507219314575,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06470923405140638,
+              "eps_device_apriori": 0.1613933669467198,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09388981014490128,
+              "eps_device_apriori": 0.16397217494144312,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1185464859008789,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18780910968780518,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12992507219314575,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06470923405140638,
+              "eps_device_apriori": 0.1613933669467198,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09388981014490128,
+              "eps_device_apriori": 0.16397217494144312,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09943293407559395,
+              "eps_device_apriori": 0.16507421825721136,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06306605972349644,
+              "eps_device_apriori": 0.16790847872092596,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0787512306123972,
+              "eps_device_apriori": 0.16076104734732977,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.027270490303635597,
+          "eps_device": 0.1613933669467198,
+          "max_dev_hw": 0.06470923405140638,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.029849298298358917,
+          "eps_device": 0.16397217494144312,
+          "max_dev_hw": 0.09388981014490128,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03095134161412716,
+          "eps_device": 0.16507421825721136,
+          "max_dev_hw": 0.09943293407559395,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03378560207784176,
+          "eps_device": 0.16790847872092596,
+          "max_dev_hw": 0.06306605972349644,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.026638170704245567,
+          "eps_device": 0.16076104734732977,
+          "max_dev_hw": 0.0787512306123972,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    },
+    {
+      "trial_idx": 9,
+      "sim_desc_seed": 54,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.026562409475445747,
+          "max_dev_hw": 0.11923408508300781,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.02737819403409958,
+          "max_dev_hw": 0.18996846675872803,
+          "eps_model": 0.02846739608154425
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.032901592552661896,
+          "max_dev_hw": 0.12790584564208984,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.02737819403409958,
+        "eps_device_heldout_fez": 0.16150107067718378,
+        "max_dev_hw_fez": 0.18996846675872803,
+        "margin": -0.02846739608154425,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11923408508300781,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18996846675872803,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12790584564208984,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11923408508300781,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18996846675872803,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12790584564208984,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09158018417656422,
+              "eps_device_apriori": 0.16690102797641626,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08284208551049232,
+              "eps_device_apriori": 0.1705155691195952,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11923408508300781,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18996846675872803,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12790584564208984,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09158018417656422,
+              "eps_device_apriori": 0.16690102797641626,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08284208551049232,
+              "eps_device_apriori": 0.1705155691195952,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.06788532668724656,
+              "eps_device_apriori": 0.1834684910316693,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06614136695861816,
+              "eps_device_apriori": 0.16836806126578918,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08973378129303455,
+              "eps_device_apriori": 0.1615993475605475,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03277815133333206,
+          "eps_device": 0.16690102797641626,
+          "max_dev_hw": 0.09158018417656422,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.036392692476511,
+          "eps_device": 0.1705155691195952,
+          "max_dev_hw": 0.08284208551049232,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.04934561438858509,
+          "eps_device": 0.1834684910316693,
+          "max_dev_hw": 0.06788532668724656,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03424518462270498,
+          "eps_device": 0.16836806126578918,
+          "max_dev_hw": 0.06614136695861816,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.027476470917463303,
+          "eps_device": 0.1615993475605475,
+          "max_dev_hw": 0.08973378129303455,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 10,
+      "sim_desc_seed": 55,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.0337694026529789,
+          "max_dev_hw": 0.11853891611099243,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03377395449206233,
+          "max_dev_hw": 0.1858271360397339,
+          "eps_model": 0.017930304904587357
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03770396625623107,
+          "max_dev_hw": 0.12706494331359863,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03377395449206233,
+        "eps_device_heldout_fez": 0.16789683113514653,
+        "max_dev_hw_fez": 0.1858271360397339,
+        "margin": -0.017930304904587357,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11853891611099243,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1858271360397339,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12706494331359863,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11853891611099243,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1858271360397339,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12706494331359863,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09110050648450851,
+              "eps_device_apriori": 0.16877348367764822,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07521389424800873,
+              "eps_device_apriori": 0.16185996607586017,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11853891611099243,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1858271360397339,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12706494331359863,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09110050648450851,
+              "eps_device_apriori": 0.16877348367764822,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07521389424800873,
+              "eps_device_apriori": 0.16185996607586017,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.06601387821137905,
+              "eps_device_apriori": 0.17109880988194814,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08822641521692276,
+              "eps_device_apriori": 0.1655470376898276,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08039336279034615,
+              "eps_device_apriori": 0.17233554665639272,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03465060703456402,
+          "eps_device": 0.16877348367764822,
+          "max_dev_hw": 0.09110050648450851,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.027737089432775974,
+          "eps_device": 0.16185996607586017,
+          "max_dev_hw": 0.07521389424800873,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.036975933238863945,
+          "eps_device": 0.17109880988194814,
+          "max_dev_hw": 0.06601387821137905,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03142416104674339,
+          "eps_device": 0.1655470376898276,
+          "max_dev_hw": 0.08822641521692276,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.038212670013308525,
+          "eps_device": 0.17233554665639272,
+          "max_dev_hw": 0.08039336279034615,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.2
+    },
+    {
+      "trial_idx": 11,
+      "sim_desc_seed": 56,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03748491406440735,
+          "max_dev_hw": 0.11426782608032227,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03791279345750809,
+          "max_dev_hw": 0.1840660572052002,
+          "eps_model": 0.01203038710460791
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.030285447370260954,
+          "max_dev_hw": 0.13035953044891357,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03791279345750809,
+        "eps_device_heldout_fez": 0.1720356701005923,
+        "max_dev_hw_fez": 0.1840660572052002,
+        "margin": -0.01203038710460791,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11426782608032227,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1840660572052002,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13035953044891357,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11426782608032227,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1840660572052002,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13035953044891357,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06671495083719492,
+              "eps_device_apriori": 0.16527296528860203,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08875710610300303,
+              "eps_device_apriori": 0.16532310350506774,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11426782608032227,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1840660572052002,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13035953044891357,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06671495083719492,
+              "eps_device_apriori": 0.16527296528860203,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08875710610300303,
+              "eps_device_apriori": 0.16532310350506774,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.08115542028099298,
+              "eps_device_apriori": 0.16234216392680278,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08656920678913593,
+              "eps_device_apriori": 0.15653088940947524,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.10826484207063913,
+              "eps_device_apriori": 0.1797808978770601,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.031150088645517826,
+          "eps_device": 0.16527296528860203,
+          "max_dev_hw": 0.06671495083719492,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031200226861983538,
+          "eps_device": 0.16532310350506774,
+          "max_dev_hw": 0.08875710610300303,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.028219287283718586,
+          "eps_device": 0.16234216392680278,
+          "max_dev_hw": 0.08115542028099298,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02240801276639104,
+          "eps_device": 0.15653088940947524,
+          "max_dev_hw": 0.08656920678913593,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.04565802123397589,
+          "eps_device": 0.1797808978770601,
+          "max_dev_hw": 0.10826484207063913,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.6
+    },
+    {
+      "trial_idx": 12,
+      "sim_desc_seed": 57,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.033371008932590485,
+          "max_dev_hw": 0.11554503440856934,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.04407024569809437,
+          "max_dev_hw": 0.18568634986877441,
+          "eps_model": 0.007493227527595847
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03432113118469715,
+          "max_dev_hw": 0.13483339548110962,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.04407024569809437,
+        "eps_device_heldout_fez": 0.17819312234117857,
+        "max_dev_hw_fez": 0.18568634986877441,
+        "margin": -0.007493227527595847,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11554503440856934,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18568634986877441,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13483339548110962,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11554503440856934,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18568634986877441,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13483339548110962,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09190326370298862,
+              "eps_device_apriori": 0.16209162511571518,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09292727615684271,
+              "eps_device_apriori": 0.16525879149033895,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11554503440856934,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18568634986877441,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13483339548110962,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09190326370298862,
+              "eps_device_apriori": 0.16209162511571518,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09292727615684271,
+              "eps_device_apriori": 0.16525879149033895,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.06569119729101658,
+              "eps_device_apriori": 0.1689209064532744,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07578071299940348,
+              "eps_device_apriori": 0.1626791816268789,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07025123480707407,
+              "eps_device_apriori": 0.17164247688546053,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.027968748472630978,
+          "eps_device": 0.16209162511571518,
+          "max_dev_hw": 0.09190326370298862,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031135914847254753,
+          "eps_device": 0.16525879149033895,
+          "max_dev_hw": 0.09292727615684271,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.0347980298101902,
+          "eps_device": 0.1689209064532744,
+          "max_dev_hw": 0.06569119729101658,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02855630498379469,
+          "eps_device": 0.1626791816268789,
+          "max_dev_hw": 0.07578071299940348,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03751960024237633,
+          "eps_device": 0.17164247688546053,
+          "max_dev_hw": 0.07025123480707407,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 13,
+      "sim_desc_seed": 58,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.04861641675233841,
+          "max_dev_hw": 0.11848533153533936,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03107902966439724,
+          "max_dev_hw": 0.18818646669387817,
+          "eps_model": 0.022984560386396735
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.033622732385993004,
+          "max_dev_hw": 0.13411402702331543,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03107902966439724,
+        "eps_device_heldout_fez": 0.16520190630748144,
+        "max_dev_hw_fez": 0.18818646669387817,
+        "margin": -0.022984560386396735,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11848533153533936,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18818646669387817,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13411402702331543,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11848533153533936,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18818646669387817,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13411402702331543,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.10594036895781755,
+              "eps_device_apriori": 0.17224496436014047,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07712699379771948,
+              "eps_device_apriori": 0.17126270030333868,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11848533153533936,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18818646669387817,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13411402702331543,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.10594036895781755,
+              "eps_device_apriori": 0.17224496436014047,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07712699379771948,
+              "eps_device_apriori": 0.17126270030333868,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07103228871710598,
+              "eps_device_apriori": 0.16873593554540744,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0853707604110241,
+              "eps_device_apriori": 0.16757772137119642,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08572065737098455,
+              "eps_device_apriori": 0.16278674286498895,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.038122087717056274,
+          "eps_device": 0.17224496436014047,
+          "max_dev_hw": 0.10594036895781755,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03713982366025448,
+          "eps_device": 0.17126270030333868,
+          "max_dev_hw": 0.07712699379771948,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.034613058902323246,
+          "eps_device": 0.16873593554540744,
+          "max_dev_hw": 0.07103228871710598,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03345484472811222,
+          "eps_device": 0.16757772137119642,
+          "max_dev_hw": 0.0853707604110241,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.028663866221904755,
+          "eps_device": 0.16278674286498895,
+          "max_dev_hw": 0.08572065737098455,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    },
+    {
+      "trial_idx": 14,
+      "sim_desc_seed": 59,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03144161868840456,
+          "max_dev_hw": 0.1202433705329895,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03274490684270859,
+          "max_dev_hw": 0.18758904933929443,
+          "eps_model": 0.020721265853501647
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.0320707019418478,
+          "max_dev_hw": 0.13298755884170532,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03274490684270859,
+        "eps_device_heldout_fez": 0.1668677834857928,
+        "max_dev_hw_fez": 0.18758904933929443,
+        "margin": -0.020721265853501647,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1202433705329895,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18758904933929443,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13298755884170532,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1202433705329895,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18758904933929443,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13298755884170532,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06832242012023926,
+              "eps_device_apriori": 0.16382197496189943,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09519866103073582,
+              "eps_device_apriori": 0.17094636168970934,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1202433705329895,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18758904933929443,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13298755884170532,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06832242012023926,
+              "eps_device_apriori": 0.16382197496189943,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09519866103073582,
+              "eps_device_apriori": 0.17094636168970934,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07116897962987423,
+              "eps_device_apriori": 0.17924054172530046,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08639237843453884,
+              "eps_device_apriori": 0.15801912937953344,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07328998669981956,
+              "eps_device_apriori": 0.17418511044874063,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.02969909831881523,
+          "eps_device": 0.16382197496189943,
+          "max_dev_hw": 0.06832242012023926,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03682348504662514,
+          "eps_device": 0.17094636168970934,
+          "max_dev_hw": 0.09519866103073582,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.04511766508221626,
+          "eps_device": 0.17924054172530046,
+          "max_dev_hw": 0.07116897962987423,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02389625273644924,
+          "eps_device": 0.15801912937953344,
+          "max_dev_hw": 0.08639237843453884,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.04006223380565643,
+          "eps_device": 0.17418511044874063,
+          "max_dev_hw": 0.07328998669981956,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 15,
+      "sim_desc_seed": 60,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03616772219538689,
+          "max_dev_hw": 0.11465322971343994,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.0350976106710732,
+          "max_dev_hw": 0.1863904595375061,
+          "eps_model": 0.017169972223348706
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03542157355695963,
+          "max_dev_hw": 0.1326584815979004,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.0350976106710732,
+        "eps_device_heldout_fez": 0.1692204873141574,
+        "max_dev_hw_fez": 0.1863904595375061,
+        "margin": -0.017169972223348706,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11465322971343994,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1863904595375061,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1326584815979004,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11465322971343994,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1863904595375061,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1326584815979004,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08323270455002785,
+              "eps_device_apriori": 0.1680223031033503,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09015657566487789,
+              "eps_device_apriori": 0.1671505460579621,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11465322971343994,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1863904595375061,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1326584815979004,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08323270455002785,
+              "eps_device_apriori": 0.1680223031033503,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09015657566487789,
+              "eps_device_apriori": 0.1671505460579621,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.08317041397094727,
+              "eps_device_apriori": 0.16223958712711206,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0902758277952671,
+              "eps_device_apriori": 0.16109900940849653,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.06524265557527542,
+              "eps_device_apriori": 0.18705264684452882,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03389942646026611,
+          "eps_device": 0.1680223031033503,
+          "max_dev_hw": 0.08323270455002785,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03302766941487789,
+          "eps_device": 0.1671505460579621,
+          "max_dev_hw": 0.09015657566487789,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.028116710484027863,
+          "eps_device": 0.16223958712711206,
+          "max_dev_hw": 0.08317041397094727,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02697613276541233,
+          "eps_device": 0.16109900940849653,
+          "max_dev_hw": 0.0902758277952671,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.052929770201444626,
+          "eps_device": 0.18705264684452882,
+          "max_dev_hw": 0.06524265557527542,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    },
+    {
+      "trial_idx": 16,
+      "sim_desc_seed": 61,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.046130044385790825,
+          "max_dev_hw": 0.11562937498092651,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03339596465229988,
+          "max_dev_hw": 0.1885894536972046,
+          "eps_model": 0.02107061240182051
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.05022699013352394,
+          "max_dev_hw": 0.1307716965675354,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03339596465229988,
+        "eps_device_heldout_fez": 0.16751884129538408,
+        "max_dev_hw_fez": 0.1885894536972046,
+        "margin": -0.02107061240182051,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11562937498092651,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1885894536972046,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1307716965675354,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11562937498092651,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1885894536972046,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1307716965675354,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.082192562520504,
+              "eps_device_apriori": 0.1711494235385882,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07306193932890892,
+              "eps_device_apriori": 0.1748579034645783,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11562937498092651,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1885894536972046,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1307716965675354,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.082192562520504,
+              "eps_device_apriori": 0.1711494235385882,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07306193932890892,
+              "eps_device_apriori": 0.1748579034645783,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07290762010961771,
+              "eps_device_apriori": 0.16403172743215433,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07683634478598833,
+              "eps_device_apriori": 0.1778600255091416,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.06595595087856054,
+              "eps_device_apriori": 0.16991746631159654,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.037026546895504,
+          "eps_device": 0.1711494235385882,
+          "max_dev_hw": 0.082192562520504,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.0407350268214941,
+          "eps_device": 0.1748579034645783,
+          "max_dev_hw": 0.07306193932890892,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.02990885078907013,
+          "eps_device": 0.16403172743215433,
+          "max_dev_hw": 0.07290762010961771,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.043737148866057396,
+          "eps_device": 0.1778600255091416,
+          "max_dev_hw": 0.07683634478598833,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.035794589668512344,
+          "eps_device": 0.16991746631159654,
+          "max_dev_hw": 0.06595595087856054,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.6
+    },
+    {
+      "trial_idx": 17,
+      "sim_desc_seed": 62,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.032797861844301224,
+          "max_dev_hw": 0.12164312601089478,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.024576246738433838,
+          "max_dev_hw": 0.18704551458358765,
+          "eps_model": 0.02834639120206961
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03214767761528492,
+          "max_dev_hw": 0.13173460960388184,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.024576246738433838,
+        "eps_device_heldout_fez": 0.15869912338151804,
+        "max_dev_hw_fez": 0.18704551458358765,
+        "margin": -0.02834639120206961,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12164312601089478,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18704551458358765,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13173460960388184,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12164312601089478,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18704551458358765,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13173460960388184,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06925340974703431,
+              "eps_device_apriori": 0.17080510520084968,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.10005708318203688,
+              "eps_device_apriori": 0.1581561772216784,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12164312601089478,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18704551458358765,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13173460960388184,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06925340974703431,
+              "eps_device_apriori": 0.17080510520084968,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.10005708318203688,
+              "eps_device_apriori": 0.1581561772216784,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.08634021319448948,
+              "eps_device_apriori": 0.16559741385921112,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.09412356186658144,
+              "eps_device_apriori": 0.18400764670863023,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08048844011500478,
+              "eps_device_apriori": 0.16783136428042522,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.036682228557765484,
+          "eps_device": 0.17080510520084968,
+          "max_dev_hw": 0.06925340974703431,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.024033300578594208,
+          "eps_device": 0.1581561772216784,
+          "max_dev_hw": 0.10005708318203688,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03147453721612692,
+          "eps_device": 0.16559741385921112,
+          "max_dev_hw": 0.08634021319448948,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.049884770065546036,
+          "eps_device": 0.18400764670863023,
+          "max_dev_hw": 0.09412356186658144,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03370848763734102,
+          "eps_device": 0.16783136428042522,
+          "max_dev_hw": 0.08048844011500478,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    },
+    {
+      "trial_idx": 18,
+      "sim_desc_seed": 63,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.035533929243683815,
+          "max_dev_hw": 0.11671608686447144,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03935564309358597,
+          "max_dev_hw": 0.18807560205459595,
+          "eps_model": 0.01459708231792578
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.04398603644222021,
+          "max_dev_hw": 0.13029783964157104,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03935564309358597,
+        "eps_device_heldout_fez": 0.17347851973667017,
+        "max_dev_hw_fez": 0.18807560205459595,
+        "margin": -0.01459708231792578,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11671608686447144,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18807560205459595,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13029783964157104,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11671608686447144,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18807560205459595,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13029783964157104,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06859356863424182,
+              "eps_device_apriori": 0.17209680583968034,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.05786328762769699,
+              "eps_device_apriori": 0.1651310028572308,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11671608686447144,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18807560205459595,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13029783964157104,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06859356863424182,
+              "eps_device_apriori": 0.17209680583968034,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.05786328762769699,
+              "eps_device_apriori": 0.1651310028572308,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.05452047963626683,
+              "eps_device_apriori": 0.17075442448898426,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.10097019653767347,
+              "eps_device_apriori": 0.17173295766755214,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08250652719289064,
+              "eps_device_apriori": 0.15927172937139145,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.037973929196596146,
+          "eps_device": 0.17209680583968034,
+          "max_dev_hw": 0.06859356863424182,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.031008126214146614,
+          "eps_device": 0.1651310028572308,
+          "max_dev_hw": 0.05786328762769699,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03663154784590006,
+          "eps_device": 0.17075442448898426,
+          "max_dev_hw": 0.05452047963626683,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.037610081024467945,
+          "eps_device": 0.17173295766755214,
+          "max_dev_hw": 0.10097019653767347,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.025148852728307247,
+          "eps_device": 0.15927172937139145,
+          "max_dev_hw": 0.08250652719289064,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 19,
+      "sim_desc_seed": 64,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.026862273924052715,
+          "max_dev_hw": 0.11746740341186523,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.028390034567564726,
+          "max_dev_hw": 0.18969446420669556,
+          "eps_model": 0.027181552996046632
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.04652042128145695,
+          "max_dev_hw": 0.1363239884376526,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.028390034567564726,
+        "eps_device_heldout_fez": 0.16251291121064892,
+        "max_dev_hw_fez": 0.18969446420669556,
+        "margin": -0.027181552996046632,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746740341186523,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18969446420669556,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1363239884376526,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746740341186523,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18969446420669556,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1363239884376526,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06689613871276379,
+              "eps_device_apriori": 0.18204818498983255,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07469138130545616,
+              "eps_device_apriori": 0.16332056672021023,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11746740341186523,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18969446420669556,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1363239884376526,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06689613871276379,
+              "eps_device_apriori": 0.18204818498983255,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07469138130545616,
+              "eps_device_apriori": 0.16332056672021023,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.09944775374606252,
+              "eps_device_apriori": 0.17081749924167267,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06891339458525181,
+              "eps_device_apriori": 0.1611567476828324,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.11609278060495853,
+              "eps_device_apriori": 0.1772523412544953,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.04792530834674835,
+          "eps_device": 0.18204818498983255,
+          "max_dev_hw": 0.06689613871276379,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.029197690077126026,
+          "eps_device": 0.16332056672021023,
+          "max_dev_hw": 0.07469138130545616,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03669462259858847,
+          "eps_device": 0.17081749924167267,
+          "max_dev_hw": 0.09944775374606252,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.027033871039748192,
+          "eps_device": 0.1611567476828324,
+          "max_dev_hw": 0.06891339458525181,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.043129464611411095,
+          "eps_device": 0.1772523412544953,
+          "max_dev_hw": 0.11609278060495853,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 20,
+      "sim_desc_seed": 65,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03738892311230302,
+          "max_dev_hw": 0.11851167678833008,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03358673397451639,
+          "max_dev_hw": 0.1868535876274109,
+          "eps_model": 0.019143977009810298
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03237234428524971,
+          "max_dev_hw": 0.12547296285629272,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03358673397451639,
+        "eps_device_heldout_fez": 0.1677096106176006,
+        "max_dev_hw_fez": 0.1868535876274109,
+        "margin": -0.019143977009810298,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11851167678833008,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868535876274109,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12547296285629272,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11851167678833008,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868535876274109,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12547296285629272,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08319449424743652,
+              "eps_device_apriori": 0.1921463349898087,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.10423251567408442,
+              "eps_device_apriori": 0.17236156967177263,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11851167678833008,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1868535876274109,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12547296285629272,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08319449424743652,
+              "eps_device_apriori": 0.1921463349898087,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.10423251567408442,
+              "eps_device_apriori": 0.17236156967177263,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07975839637219906,
+              "eps_device_apriori": 0.17947543804242483,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.09652406862005591,
+              "eps_device_apriori": 0.1731250790943133,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0946325734257698,
+              "eps_device_apriori": 0.17117146794392935,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.05802345834672451,
+          "eps_device": 0.1921463349898087,
+          "max_dev_hw": 0.08319449424743652,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03823869302868843,
+          "eps_device": 0.17236156967177263,
+          "max_dev_hw": 0.10423251567408442,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.04535256139934063,
+          "eps_device": 0.17947543804242483,
+          "max_dev_hw": 0.07975839637219906,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.039002202451229095,
+          "eps_device": 0.1731250790943133,
+          "max_dev_hw": 0.09652406862005591,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.037048591300845146,
+          "eps_device": 0.17117146794392935,
+          "max_dev_hw": 0.0946325734257698,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 21,
+      "sim_desc_seed": 66,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.040422189980745316,
+          "max_dev_hw": 0.1165735125541687,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.033996669575572014,
+          "max_dev_hw": 0.18432343006134033,
+          "eps_model": 0.01620388384268412
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03759044501930475,
+          "max_dev_hw": 0.13143444061279297,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.033996669575572014,
+        "eps_device_heldout_fez": 0.1681195462186562,
+        "max_dev_hw_fez": 0.18432343006134033,
+        "margin": -0.01620388384268412,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1165735125541687,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432343006134033,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13143444061279297,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1165735125541687,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432343006134033,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13143444061279297,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06288197636604309,
+              "eps_device_apriori": 0.15900475900328925,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08965005283243954,
+              "eps_device_apriori": 0.15834612372040024,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1165735125541687,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432343006134033,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13143444061279297,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.06288197636604309,
+              "eps_device_apriori": 0.15900475900328925,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08965005283243954,
+              "eps_device_apriori": 0.15834612372040024,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.0777298528701067,
+              "eps_device_apriori": 0.16669043964415065,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.06145481811836362,
+              "eps_device_apriori": 0.1630884558724912,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07471005851402879,
+              "eps_device_apriori": 0.16305878218903413,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.024881882360205054,
+          "eps_device": 0.15900475900328925,
+          "max_dev_hw": 0.06288197636604309,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.024223247077316046,
+          "eps_device": 0.15834612372040024,
+          "max_dev_hw": 0.08965005283243954,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.032567563001066446,
+          "eps_device": 0.16669043964415065,
+          "max_dev_hw": 0.0777298528701067,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.028965579229407012,
+          "eps_device": 0.1630884558724912,
+          "max_dev_hw": 0.06145481811836362,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.028935905545949936,
+          "eps_device": 0.16305878218903413,
+          "max_dev_hw": 0.07471005851402879,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 22,
+      "sim_desc_seed": 67,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.038911035284399986,
+          "max_dev_hw": 0.11122816801071167,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.030107060447335243,
+          "max_dev_hw": 0.18363064527511597,
+          "eps_model": 0.019400708184696525
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.031232252717018127,
+          "max_dev_hw": 0.13340836763381958,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.030107060447335243,
+        "eps_device_heldout_fez": 0.16422993709041944,
+        "max_dev_hw_fez": 0.18363064527511597,
+        "margin": -0.019400708184696525,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11122816801071167,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18363064527511597,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13340836763381958,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11122816801071167,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18363064527511597,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13340836763381958,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07134860614314675,
+              "eps_device_apriori": 0.17537445408000818,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0624873167835176,
+              "eps_device_apriori": 0.17974090036644808,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11122816801071167,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18363064527511597,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13340836763381958,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07134860614314675,
+              "eps_device_apriori": 0.17537445408000818,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0624873167835176,
+              "eps_device_apriori": 0.17974090036644808,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07046720571815968,
+              "eps_device_apriori": 0.16949449778243175,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.10282870288938284,
+              "eps_device_apriori": 0.17816197332634798,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0929162036627531,
+              "eps_device_apriori": 0.17461728323891035,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.04125157743692398,
+          "eps_device": 0.17537445408000818,
+          "max_dev_hw": 0.07134860614314675,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.045618023723363876,
+          "eps_device": 0.17974090036644808,
+          "max_dev_hw": 0.0624873167835176,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.03537162113934755,
+          "eps_device": 0.16949449778243175,
+          "max_dev_hw": 0.07046720571815968,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.04403909668326378,
+          "eps_device": 0.17816197332634798,
+          "max_dev_hw": 0.10282870288938284,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.04049440659582615,
+          "eps_device": 0.17461728323891035,
+          "max_dev_hw": 0.0929162036627531,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 23,
+      "sim_desc_seed": 68,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.03756849840283394,
+          "max_dev_hw": 0.12283837795257568,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.026404056698083878,
+          "max_dev_hw": 0.18677103519439697,
+          "eps_model": 0.026244101853228896
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.0365348681807518,
+          "max_dev_hw": 0.12595856189727783,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.026404056698083878,
+        "eps_device_heldout_fez": 0.16052693334116808,
+        "max_dev_hw_fez": 0.18677103519439697,
+        "margin": -0.026244101853228896,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12283837795257568,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18677103519439697,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12595856189727783,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12283837795257568,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18677103519439697,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12595856189727783,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08502788282930851,
+              "eps_device_apriori": 0.173635648756169,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08967454731464386,
+              "eps_device_apriori": 0.1649616194952952,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12283837795257568,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18677103519439697,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12595856189727783,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.08502788282930851,
+              "eps_device_apriori": 0.173635648756169,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.08967454731464386,
+              "eps_device_apriori": 0.1649616194952952,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07894742861390114,
+              "eps_device_apriori": 0.16238275468989483,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.08180670067667961,
+              "eps_device_apriori": 0.16029587034776083,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08715275302529335,
+              "eps_device_apriori": 0.1636721437860953,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03951277211308479,
+          "eps_device": 0.173635648756169,
+          "max_dev_hw": 0.08502788282930851,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.030838742852211,
+          "eps_device": 0.1649616194952952,
+          "max_dev_hw": 0.08967454731464386,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.028259878046810627,
+          "eps_device": 0.16238275468989483,
+          "max_dev_hw": 0.07894742861390114,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.026172993704676628,
+          "eps_device": 0.16029587034776083,
+          "max_dev_hw": 0.08180670067667961,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.029549267143011093,
+          "eps_device": 0.1636721437860953,
+          "max_dev_hw": 0.08715275302529335,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    },
+    {
+      "trial_idx": 24,
+      "sim_desc_seed": 69,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.04432113282382488,
+          "max_dev_hw": 0.11575078964233398,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.046928005293011665,
+          "max_dev_hw": 0.18685829639434814,
+          "eps_model": 0.00580741445825228
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.04061773978173733,
+          "max_dev_hw": 0.13647913932800293,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.046928005293011665,
+        "eps_device_heldout_fez": 0.18105088193609586,
+        "max_dev_hw_fez": 0.18685829639434814,
+        "margin": -0.00580741445825228,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11575078964233398,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18685829639434814,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13647913932800293,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11575078964233398,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18685829639434814,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13647913932800293,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.10895921848714352,
+              "eps_device_apriori": 0.17301419024064413,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07292363466694951,
+              "eps_device_apriori": 0.17529308256401888,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11575078964233398,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18685829639434814,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.13647913932800293,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.10895921848714352,
+              "eps_device_apriori": 0.17301419024064413,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07292363466694951,
+              "eps_device_apriori": 0.17529308256401888,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.059675696305930614,
+              "eps_device_apriori": 0.1571677459467875,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0753964688628912,
+              "eps_device_apriori": 0.17097393163188568,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0726485401391983,
+              "eps_device_apriori": 0.173318490578674,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03889131359755993,
+          "eps_device": 0.17301419024064413,
+          "max_dev_hw": 0.10895921848714352,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.04117020592093468,
+          "eps_device": 0.17529308256401888,
+          "max_dev_hw": 0.07292363466694951,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.023044869303703308,
+          "eps_device": 0.1571677459467875,
+          "max_dev_hw": 0.059675696305930614,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.03685105498880148,
+          "eps_device": 0.17097393163188568,
+          "max_dev_hw": 0.0753964688628912,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03919561393558979,
+          "eps_device": 0.173318490578674,
+          "max_dev_hw": 0.0726485401391983,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 76.5
+    },
+    {
+      "trial_idx": 25,
+      "sim_desc_seed": 70,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.030938804149627686,
+          "max_dev_hw": 0.11718094348907471,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.02863419707864523,
+          "max_dev_hw": 0.1845826506614685,
+          "eps_model": 0.021825576939739078
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.034447431564331055,
+          "max_dev_hw": 0.1361636519432068,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.02863419707864523,
+        "eps_device_heldout_fez": 0.16275707372172943,
+        "max_dev_hw_fez": 0.1845826506614685,
+        "margin": -0.021825576939739078,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11718094348907471,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1845826506614685,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1361636519432068,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11718094348907471,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1845826506614685,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1361636519432068,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07765279989689589,
+              "eps_device_apriori": 0.16693809461488596,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0648168670013547,
+              "eps_device_apriori": 0.17356771436228624,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11718094348907471,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.1845826506614685,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1361636519432068,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07765279989689589,
+              "eps_device_apriori": 0.16693809461488596,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.0648168670013547,
+              "eps_device_apriori": 0.17356771436228624,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07965791132301092,
+              "eps_device_apriori": 0.18260366954549423,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.054647427052259445,
+              "eps_device_apriori": 0.1667164500866758,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.06843302771449089,
+              "eps_device_apriori": 0.16613101792230478,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.03281521797180176,
+          "eps_device": 0.16693809461488596,
+          "max_dev_hw": 0.07765279989689589,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03944483771920204,
+          "eps_device": 0.17356771436228624,
+          "max_dev_hw": 0.0648168670013547,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.04848079290241003,
+          "eps_device": 0.18260366954549423,
+          "max_dev_hw": 0.07965791132301092,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.032593573443591595,
+          "eps_device": 0.1667164500866758,
+          "max_dev_hw": 0.054647427052259445,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03200814127922058,
+          "eps_device": 0.16613101792230478,
+          "max_dev_hw": 0.06843302771449089,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.6
+    },
+    {
+      "trial_idx": 26,
+      "sim_desc_seed": 71,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.0245074313133955,
+          "max_dev_hw": 0.1147606372833252,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03006148897111416,
+          "max_dev_hw": 0.18659448623657227,
+          "eps_model": 0.022410120622373908
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.035200104117393494,
+          "max_dev_hw": 0.1303960680961609,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03006148897111416,
+        "eps_device_heldout_fez": 0.16418436561419836,
+        "max_dev_hw_fez": 0.18659448623657227,
+        "margin": -0.022410120622373908,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1147606372833252,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18659448623657227,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303960680961609,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1147606372833252,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18659448623657227,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303960680961609,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09324336610734463,
+              "eps_device_apriori": 0.16085894797637335,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09661852894350886,
+              "eps_device_apriori": 0.17092526164545885,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1147606372833252,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18659448623657227,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.1303960680961609,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.09324336610734463,
+              "eps_device_apriori": 0.16085894797637335,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09661852894350886,
+              "eps_device_apriori": 0.17092526164545885,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.07166194543242455,
+              "eps_device_apriori": 0.16201782664924136,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0707152709364891,
+              "eps_device_apriori": 0.16736607086553446,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.09031209349632263,
+              "eps_device_apriori": 0.1663804447342383,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.026736071333289146,
+          "eps_device": 0.16085894797637335,
+          "max_dev_hw": 0.09324336610734463,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03680238500237465,
+          "eps_device": 0.17092526164545885,
+          "max_dev_hw": 0.09661852894350886,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.02789495000615716,
+          "eps_device": 0.16201782664924136,
+          "max_dev_hw": 0.07166194543242455,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.033243194222450256,
+          "eps_device": 0.16736607086553446,
+          "max_dev_hw": 0.0707152709364891,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.0322575680911541,
+          "eps_device": 0.1663804447342383,
+          "max_dev_hw": 0.09031209349632263,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 27,
+      "sim_desc_seed": 72,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.04050994850695133,
+          "max_dev_hw": 0.1170836091041565,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.037526946514844894,
+          "max_dev_hw": 0.18660879135131836,
+          "eps_model": 0.014958968193389266
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03158726543188095,
+          "max_dev_hw": 0.12747633457183838,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.037526946514844894,
+        "eps_device_heldout_fez": 0.1716498231579291,
+        "max_dev_hw_fez": 0.18660879135131836,
+        "margin": -0.014958968193389266,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1170836091041565,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18660879135131836,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12747633457183838,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1170836091041565,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18660879135131836,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12747633457183838,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07760748453438282,
+              "eps_device_apriori": 0.18341004867746702,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.05358170159161091,
+              "eps_device_apriori": 0.18410214428498617,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.1170836091041565,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18660879135131836,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12747633457183838,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07760748453438282,
+              "eps_device_apriori": 0.18341004867746702,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.05358170159161091,
+              "eps_device_apriori": 0.18410214428498617,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.06694383174180984,
+              "eps_device_apriori": 0.16028436851396433,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.0818355968222022,
+              "eps_device_apriori": 0.18140567858412138,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.07382994517683983,
+              "eps_device_apriori": 0.1653739327628838,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.04928717203438282,
+          "eps_device": 0.18341004867746702,
+          "max_dev_hw": 0.07760748453438282,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.04997926764190197,
+          "eps_device": 0.18410214428498617,
+          "max_dev_hw": 0.05358170159161091,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.026161491870880127,
+          "eps_device": 0.16028436851396433,
+          "max_dev_hw": 0.06694383174180984,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.04728280194103718,
+          "eps_device": 0.18140567858412138,
+          "max_dev_hw": 0.0818355968222022,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.031251056119799614,
+          "eps_device": 0.1653739327628838,
+          "max_dev_hw": 0.07382994517683983,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.5
+    },
+    {
+      "trial_idx": 28,
+      "sim_desc_seed": 73,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.027115873992443085,
+          "max_dev_hw": 0.11474871635437012,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.030334236100316048,
+          "max_dev_hw": 0.18432772159576416,
+          "eps_model": 0.019870608852363913
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.04542165994644165,
+          "max_dev_hw": 0.12718409299850464,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.030334236100316048,
+        "eps_device_heldout_fez": 0.16445711274340025,
+        "max_dev_hw_fez": 0.18432772159576416,
+        "margin": -0.019870608852363913,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474871635437012,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432772159576416,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12718409299850464,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474871635437012,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432772159576416,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12718409299850464,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07908440381288528,
+              "eps_device_apriori": 0.16463083420588842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07479085214436054,
+              "eps_device_apriori": 0.17605484855069986,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.11474871635437012,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.18432772159576416,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12718409299850464,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07908440381288528,
+              "eps_device_apriori": 0.16463083420588842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.07479085214436054,
+              "eps_device_apriori": 0.17605484855069986,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.08564847894012928,
+              "eps_device_apriori": 0.1657364277233111,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07833652105182409,
+              "eps_device_apriori": 0.16588272546126714,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.0645419298671186,
+              "eps_device_apriori": 0.16732004117860666,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 0,
+          "type_I_rate": 0.0
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.030507957562804222,
+          "eps_device": 0.16463083420588842,
+          "max_dev_hw": 0.07908440381288528,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.04193197190761566,
+          "eps_device": 0.17605484855069986,
+          "max_dev_hw": 0.07479085214436054,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.0316135510802269,
+          "eps_device": 0.1657364277233111,
+          "max_dev_hw": 0.08564847894012928,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.031759848818182945,
+          "eps_device": 0.16588272546126714,
+          "max_dev_hw": 0.07833652105182409,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03319716453552246,
+          "eps_device": 0.16732004117860666,
+          "max_dev_hw": 0.0645419298671186,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.7
+    },
+    {
+      "trial_idx": 29,
+      "sim_desc_seed": 74,
+      "real_records": {
+        "ibm_kingston": {
+          "eps_pred": 0.031523143872618675,
+          "max_dev_hw": 0.12410986423492432,
+          "eps_model": 0.0
+        },
+        "ibm_fez": {
+          "eps_pred": 0.03620044142007828,
+          "max_dev_hw": 0.19223624467849731,
+          "eps_model": 0.021912926615334838
+        },
+        "ibm_marrakesh": {
+          "eps_pred": 0.03148697316646576,
+          "max_dev_hw": 0.12426406145095825,
+          "eps_model": 0.0
+        }
+      },
+      "heldout": {
+        "eps_model_kingston": 0.0,
+        "eps_model_marrakesh": 0.0,
+        "eps_model_heldout": 0.0,
+        "eps_pred_fez": 0.03620044142007828,
+        "eps_device_heldout_fez": 0.17032331806316248,
+        "max_dev_hw_fez": 0.19223624467849731,
+        "margin": -0.021912926615334838,
+        "passes_heldout": false
+      },
+      "federation_per_N": {
+        "3": {
+          "N": 3,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12410986423492432,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.19223624467849731,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12426406145095825,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.3333333333333333
+        },
+        "5": {
+          "N": 5,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12410986423492432,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.19223624467849731,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12426406145095825,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07051521632820368,
+              "eps_device_apriori": 0.16404191796376577,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09149451553821564,
+              "eps_device_apriori": 0.16896552052988878,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.2
+        },
+        "8": {
+          "N": 8,
+          "devices": [
+            {
+              "id": "ibm_kingston",
+              "source": "real",
+              "max_dev_hw": 0.12410986423492432,
+              "eps_device_apriori": 0.1641228766430842,
+              "flagged": false
+            },
+            {
+              "id": "ibm_fez",
+              "source": "real",
+              "max_dev_hw": 0.19223624467849731,
+              "eps_device_apriori": 0.1851228766430842,
+              "flagged": true
+            },
+            {
+              "id": "ibm_marrakesh",
+              "source": "real",
+              "max_dev_hw": 0.12426406145095825,
+              "eps_device_apriori": 0.1751228766430842,
+              "flagged": false
+            },
+            {
+              "id": "aersim_0",
+              "source": "sim",
+              "max_dev_hw": 0.07051521632820368,
+              "eps_device_apriori": 0.16404191796376577,
+              "flagged": false
+            },
+            {
+              "id": "aersim_1",
+              "source": "sim",
+              "max_dev_hw": 0.09149451553821564,
+              "eps_device_apriori": 0.16896552052988878,
+              "flagged": false
+            },
+            {
+              "id": "aersim_2",
+              "source": "sim",
+              "max_dev_hw": 0.08813872560858727,
+              "eps_device_apriori": 0.1759965412382709,
+              "flagged": false
+            },
+            {
+              "id": "aersim_3",
+              "source": "sim",
+              "max_dev_hw": 0.07142645865678787,
+              "eps_device_apriori": 0.16264330056204668,
+              "flagged": false
+            },
+            {
+              "id": "aersim_4",
+              "source": "sim",
+              "max_dev_hw": 0.08060607966035604,
+              "eps_device_apriori": 0.16570152827247253,
+              "flagged": false
+            }
+          ],
+          "n_flagged": 1,
+          "type_I_rate": 0.125
+        }
+      },
+      "sim_records": [
+        {
+          "id": "aersim_0",
+          "eps_pred": 0.029919041320681572,
+          "eps_device": 0.16404191796376577,
+          "max_dev_hw": 0.07051521632820368,
+          "flagged": false
+        },
+        {
+          "id": "aersim_1",
+          "eps_pred": 0.03484264388680458,
+          "eps_device": 0.16896552052988878,
+          "max_dev_hw": 0.09149451553821564,
+          "flagged": false
+        },
+        {
+          "id": "aersim_2",
+          "eps_pred": 0.04187366459518671,
+          "eps_device": 0.1759965412382709,
+          "max_dev_hw": 0.08813872560858727,
+          "flagged": false
+        },
+        {
+          "id": "aersim_3",
+          "eps_pred": 0.02852042391896248,
+          "eps_device": 0.16264330056204668,
+          "max_dev_hw": 0.07142645865678787,
+          "flagged": false
+        },
+        {
+          "id": "aersim_4",
+          "eps_pred": 0.03157865162938833,
+          "eps_device": 0.16570152827247253,
+          "max_dev_hw": 0.08060607966035604,
+          "flagged": false
+        }
+      ],
+      "wall_seconds": 75.4
+    }
+  ],
+  "total_wall_seconds": 2274.6
+}

@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "descriptor-attestation"
+version = "0.1.0"
+description = "Reproduction code and cached results for descriptor attestation of federated quantum calibration."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "The descriptor-attestation contributors" },
+]
+keywords = [
+    "quantum-error-mitigation",
+    "verification",
+    "federated-quantum-computing",
+    "witness-circuits",
+    "calibration-attestation",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=2.0,<3.0",
+    "scipy>=1.13,<2.0",
+    "scikit-learn>=1.5,<2.0",
+    "matplotlib>=3.9,<4.0",
+    "pyyaml>=6.0,<7.0",
+    "qiskit>=2.0,<3.0",
+    "qiskit-aer>=0.17,<0.20",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

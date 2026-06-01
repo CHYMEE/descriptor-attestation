@@ -1,0 +1,161 @@
+{
+  "task": "section4_theoretical_guarantees_numerical_extraction",
+  "timestamp_utc": "2026-05-19T07:17:50.801987+00:00",
+  "config": {
+    "witness_seed": 42,
+    "predictor_desc_seed": 43,
+    "n_witnesses": 50,
+    "witness_depth": 5,
+    "train_descriptors": 100,
+    "train_shots": 2048,
+    "detection_shots": 1024,
+    "prior_sampler": "sample_descriptors_deployment"
+  },
+  "value_1_predictor_norms": {
+    "W_shape": [
+      50,
+      16
+    ],
+    "norm_W_spectral_2": 5.224022104033259,
+    "norm_W_frobenius": 5.926412446787724,
+    "norm_W_inf": 6.710999103926383,
+    "norm_W_frobenius_over_sqrt_N": 0.8381212858463918,
+    "train_residual": 0.016171520575881004,
+    "train_seconds": 67.97524881362915
+  },
+  "value_2_descriptor_norms": [
+    {
+      "backend": "ibm_kingston",
+      "norm_d_2": 1015.2794806988429,
+      "norm_d_inf": 511.5261525238937,
+      "norm_Wd_inf": 0.10944580681276492
+    },
+    {
+      "backend": "ibm_fez",
+      "norm_d_2": 512.7100645307762,
+      "norm_d_inf": 328.8609840961149,
+      "norm_Wd_inf": 0.13510907929928215
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "norm_d_2": 563.5586471853725,
+      "norm_d_inf": 300.7046946574156,
+      "norm_Wd_inf": 0.12242891327267624
+    }
+  ],
+  "value_3_theorem2_bound": [
+    {
+      "backend": "ibm_kingston",
+      "rho": 0.2,
+      "norm_Wd_inf": 0.10944580681276492,
+      "g": 0.08755664545021194,
+      "exponent": -196.25385375984945,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_kingston",
+      "rho": 0.3,
+      "norm_Wd_inf": 0.10944580681276492,
+      "g": 0.07661206476893544,
+      "exponent": -150.2568567848847,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_kingston",
+      "rho": 0.4,
+      "norm_Wd_inf": 0.10944580681276492,
+      "g": 0.06566748408765895,
+      "exponent": -110.3927927399153,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_kingston",
+      "rho": 0.5,
+      "norm_Wd_inf": 0.10944580681276492,
+      "g": 0.05472290340638246,
+      "exponent": -76.66166162494117,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_fez",
+      "rho": 0.2,
+      "norm_Wd_inf": 0.13510907929928215,
+      "g": 0.10808726343942572,
+      "exponent": -299.0811268562897,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_fez",
+      "rho": 0.3,
+      "norm_Wd_inf": 0.13510907929928215,
+      "g": 0.0945763555094975,
+      "exponent": -228.98398774934677,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_fez",
+      "rho": 0.4,
+      "norm_Wd_inf": 0.13510907929928215,
+      "g": 0.08106544757956928,
+      "exponent": -168.23313385666293,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_fez",
+      "rho": 0.5,
+      "norm_Wd_inf": 0.13510907929928215,
+      "g": 0.06755453964964107,
+      "exponent": -116.82856517823815,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "rho": 0.2,
+      "norm_Wd_inf": 0.12242891327267624,
+      "g": 0.097943130618141,
+      "exponent": -245.57713498322505,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "rho": 0.3,
+      "norm_Wd_inf": 0.12242891327267624,
+      "g": 0.08570023929087336,
+      "exponent": -188.01999397153162,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "rho": 0.4,
+      "norm_Wd_inf": 0.12242891327267624,
+      "g": 0.07345734796360574,
+      "exponent": -138.13713842806408,
+      "detection_lower_bound": 1.0
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "rho": 0.5,
+      "norm_Wd_inf": 0.12242891327267624,
+      "g": 0.06121445663633812,
+      "exponent": -95.92856835282228,
+      "detection_lower_bound": 1.0
+    }
+  ],
+  "empirical_comparison_kingston_rho_0p4": {
+    "predicted_lower_bound_theorem_2": 1.0,
+    "predicted_g": 0.06566748408765895,
+    "empirical_attack_record": {
+      "attack_id": "uniform_rho_0.40",
+      "max_deviation": 0.1753159751909018,
+      "B0_flagged_per_device_epsilon": true,
+      "B2_flagged_global_epsilon": true
+    },
+    "source_attack_sweep_json": "results/phase3/final_results/attack_sweep_per_device_epsilon.json"
+  },
+  "headline_numbers_for_section_4_prose": {
+    "headline_W_spectral_norm": 5.224022104033259,
+    "kingston_d_hw_inf_norm": 511.5261525238937,
+    "kingston_Wd_hw_inf_norm": 0.10944580681276492,
+    "kingston_predicted_detection_rho_0p4": 1.0
+  }
+}

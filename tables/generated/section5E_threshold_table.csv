@@ -1,0 +1,10 @@
+experiment,config,calib,test,n,passes,mean_margin,ci_lo,ci_hi
+experiment1,C1,{Kingston, Fez},Marrakesh,30,30,+0.055570,+0.052508,+0.058739
+experiment1,C2,{Kingston, Marrakesh},Fez,30,0,-0.018905,-0.020488,-0.017169
+experiment1,C3,{Fez, Marrakesh},Kingston,30,30,+0.068396,+0.065688,+0.071126
+experiment2,seed_100,K3,synthetic,30,30,+0.111705,+0.106468,+0.116494
+experiment2,seed_101,K3,synthetic,30,30,+0.107559,+0.101955,+0.113651
+experiment2,seed_102,K3,synthetic,30,30,+0.108165,+0.102586,+0.113934
+experiment2,seed_103,K3,synthetic,30,30,+0.106434,+0.100553,+0.112561
+experiment2,seed_104,K3,synthetic,30,30,+0.107223,+0.102730,+0.111572
+experiment2,AGGREGATE,K3,synthetic,150,150,+0.108217,+0.105742,+0.110640
