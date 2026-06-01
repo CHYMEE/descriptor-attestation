@@ -100,9 +100,10 @@ See `docs/qst_review_guide.md` for the mapping between every manuscript section 
 Until the Zenodo DOI is issued, please cite the manuscript directly. After DOI issuance, the `CITATION.cff` will carry both citations and GitHub's "Cite this repository" button will resolve to the DOI.
 
 ```bibtex
-@article{descriptor_attestation_2026,
+@article{amadi_descriptor_attestation_2026,
   title  = {Descriptor attestation for federated quantum calibration},
-  author = {Anonymous},
+  author = {Amadi, Chimeremma Sandra and Afangideh, Aniekan Asuquo and
+            Awad, Menna Magdy and Ahmed, Abdelrahman Elsayed and Jun, Taesoo},
   journal= {Quantum Science and Technology},
   year   = {2026},
   doi    = {TBD}

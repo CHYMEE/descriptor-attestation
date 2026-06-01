@@ -1,10 +1,29 @@
 cff-version: 1.2.0
 title: "descriptor-attestation: reproduction code for descriptor attestation of federated quantum calibration"
-message: "If you use this software or the cached results from this repository, please cite the associated paper and the software via the DOI below."
+message: "If you use this software or the cached results from this repository, please cite both the associated paper and the software via the DOI below."
 authors:
-  - given-names: "Anonymous"
-    family-names: "Anonymous"
-    affiliation: "see paper"
+  - given-names: "Chimeremma Sandra"
+    family-names: "Amadi"
+    affiliation: "Department of IT Convergence Engineering, Kumoh National Institute of Technology, Gumi, South Korea"
+    orcid: "https://orcid.org/0000-0001-9304-486X"
+  - given-names: "Aniekan Asuquo"
+    family-names: "Afangideh"
+    affiliation: "Department of Computer Engineering, University of Uyo, Nigeria"
+    orcid: "https://orcid.org/0009-0008-9887-7084"
+  - given-names: "Menna Magdy"
+    family-names: "Awad"
+    affiliation: "Computer and Communications Engineering, Alexandria University, Egypt"
+    # ORCID intentionally omitted: the LaTeX source duplicated Afangideh's
+    # ORCID (0009-0008-9887-7084) for this author. Add the correct ORCID
+    # once obtained and update the LaTeX in parallel.
+  - given-names: "Abdelrahman Elsayed"
+    family-names: "Ahmed"
+    affiliation: "Computer and Communications Engineering, Alexandria University, Egypt"
+    orcid: "https://orcid.org/0009-0009-1618-2404"
+  - given-names: "Taesoo"
+    family-names: "Jun"
+    affiliation: "Department of IT Convergence Engineering, Kumoh National Institute of Technology, Gumi, South Korea"
+    orcid: "https://orcid.org/0000-0002-1435-3769"
 version: 0.1.0
 date-released: "2026-06-01"
 license: MIT
@@ -15,15 +34,33 @@ keywords:
   - "verification"
   - "federated quantum computing"
   - "witness circuits"
+  - "calibration attestation"
 # After uploading to Zenodo, replace `doi: TBD` with the Zenodo-issued DOI
-# and add `identifiers:` block (see docs/zenodo_release_checklist.md).
+# and add an `identifiers:` block (see docs/zenodo_release_checklist.md).
 doi: "TBD"
 preferred-citation:
   type: article
   title: "Descriptor attestation for federated quantum calibration"
   authors:
-    - given-names: "Anonymous"
-      family-names: "Anonymous"
+    - given-names: "Chimeremma Sandra"
+      family-names: "Amadi"
+      affiliation: "Kumoh National Institute of Technology"
+      orcid: "https://orcid.org/0000-0001-9304-486X"
+    - given-names: "Aniekan Asuquo"
+      family-names: "Afangideh"
+      affiliation: "University of Uyo"
+      orcid: "https://orcid.org/0009-0008-9887-7084"
+    - given-names: "Menna Magdy"
+      family-names: "Awad"
+      affiliation: "Alexandria University"
+    - given-names: "Abdelrahman Elsayed"
+      family-names: "Ahmed"
+      affiliation: "Alexandria University"
+      orcid: "https://orcid.org/0009-0009-1618-2404"
+    - given-names: "Taesoo"
+      family-names: "Jun"
+      affiliation: "Kumoh National Institute of Technology"
+      orcid: "https://orcid.org/0000-0002-1435-3769"
   journal: "Quantum Science and Technology"
   year: 2026
   doi: "TBD"
