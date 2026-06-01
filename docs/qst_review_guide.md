@@ -30,8 +30,15 @@ Expected wall time: 5–10 minutes (dominated by ~70 s of classical AerSim densi
 |---|---|
 | ε_Hoeffding(N=50, S=1024, δ=0.01) = 0.1341 | `python scripts/03_compute_thresholds.py` (top of stdout) |
 | Predictor norms ‖W‖_2 / ‖W‖_F / ‖W‖_∞ | `python scripts/02_train_predictor.py` (writes `data/processed/predictor_norms.json`) |
+| g_star = (1-ρ)·‖W·d_hw‖_∞ per backend × ρ (inputs to corrected soundness condition) | `data/processed/section4/values.json` + `master_summary.md` |
 
-The Theorem 2 detection lower-bound evaluation tables that appear in §4 (`g(ρ) = (1-ρ)·‖W·d_hw‖_∞`) are not regenerated in scripts 01-08 but the cached values used in the paper are at `data/processed/section4/values.json`.
+**Operating-regime soundness condition (threshold-sensitive form).** The repository uses
+
+```
+S * Delta_star^2 >= 2 * ln(1 / delta_FN),    Delta_star = g_star - r_infty(d_hw) - tau > 0.
+```
+
+Older drafts that reported a `1 - exp(-2 N S * g^2 / 4)`-style "Theorem 2 detection lower bound" — including any table cell of the form "Detection lower bound = 1.000000" — are **retracted**. Those bounds were not threshold-sensitive (they did not subtract `r_infty(d_hw)` or `tau`) and the apparent "exponential headroom" they produced does not survive the corrected derivation. The cached `data/processed/section4/master_summary.md` records the g_star inputs and the corrected condition statement; per-device soundness margins under the corrected condition are deferred to follow-up theoretical work.
 
 ### Section 5.A — Statistical methodology
 
@@ -72,7 +79,7 @@ The CI conventions (Wilson when n ≥ 20 and k ∉ {0, n}; Clopper-Pearson other
 | K=2 LOO C1 ({Kingston, Fez} → Marrakesh): 30/30 pass, mean +0.0556 | `python scripts/05_run_heldout_calibration.py` |
 | K=2 LOO C2 ({Kingston, Marrakesh} → Fez): 0/30, mean -0.0189, CI [-0.0205, -0.0172] | same |
 | K=2 LOO C3 ({Fez, Marrakesh} → Kingston): 30/30, mean +0.0684 | same |
-| K=3 synthetic 150/150, mean +0.1082, CI [+0.1057, +0.1106] | same |
+| K=3 synthetic 150/150, mean +0.1082, CI [+0.1057, +0.1106] (empirical sufficiency for the evaluated Heron r2 calibration set; **not** a universal lower bound on K) | same |
 | Figure 5.E (held-out margins strip plot) | `python scripts/08_make_figures.py` → `figures/final/section5E_heldout_margins.{pdf,png}` |
 
 ### Section 5.F — Baseline comparison

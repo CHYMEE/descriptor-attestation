@@ -91,6 +91,8 @@ Per-trial detail for the 30-instance federation replication. Used by the §5.D r
 
 K=3 calibration × 5 synthetic test descriptors × 30 instances = 150 records. Per-record: `predictor_seed`, `test_desc_seed`, `physical`, `eps_model_K3`, `eps_pred_star`, `max_dev_star`, `eps_device_star`, `margin`, `passes`.
 
+**Scope note.** The K=3 result reported in this dataset is an empirical sufficiency statement for the evaluated Heron r2 calibration set, **not** a universal lower bound on calibration-set size. K=3 is not a formal requirement; out-of-distribution generalisation to architectures other than Heron r2 is not tested.
+
 ### `data/processed/section5F/task1_aggregates.json`
 
 B0/B2/B3 × phase1/phase2 = 6 aggregate cells. Per-cell: `baseline`, `anchor`, `n`, `k`, `rate`, `ci_95_lo`, `ci_95_hi`, `method`.

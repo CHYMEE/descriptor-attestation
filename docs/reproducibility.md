@@ -70,7 +70,7 @@ Expected wall time: **~5–10 minutes**, dominated by ~70 s of AerSim density-ma
 | Held-out K=2 C1 (Marrakesh held) | `05_run_heldout_calibration.py` | 30/30 pass, mean +0.0556 | 1e-3 |
 | Held-out K=2 C2 (Fez held) | `05_run_heldout_calibration.py` | 0/30 pass, mean -0.0189, CI [-0.0205, -0.0172] | 1e-3 |
 | Held-out K=2 C3 (Kingston held) | `05_run_heldout_calibration.py` | 30/30 pass, mean +0.0684 | 1e-3 |
-| Held-out K=3 synthetic aggregate | `05_run_heldout_calibration.py` | 150/150 pass, mean +0.1082, CI [+0.1057, +0.1106] | 1e-3 |
+| Held-out K=3 synthetic aggregate (empirical sufficiency, not a universal K≥3 condition; see scope note below) | `05_run_heldout_calibration.py` | 150/150 pass, mean +0.1082, CI [+0.1057, +0.1106] | 1e-3 |
 | B0 aggregate (170 attacks) | `07_run_baselines.py` | 9/170 | exact |
 | B2 aggregate | `07_run_baselines.py` | 22/170 | exact |
 | B3 aggregate | `07_run_baselines.py` | 32/170 | exact |
@@ -78,6 +78,20 @@ Expected wall time: **~5–10 minutes**, dominated by ~70 s of AerSim density-ma
 | McNemar B2 vs B0 | `07_run_baselines.py` | p = 2.44e-4 | 1e-5 |
 | McNemar B3 vs B0 | `07_run_baselines.py` | p = 1.17e-4 | 1e-5 |
 | Figures 5.B / 5.C / 5.D / 5.E | `08_make_figures.py` | PDF + PNG in `figures/final/` | n/a |
+
+## Scope of the K=3 result
+
+The Section 5.E Experiment 2 K=3 result (150/150 pass, mean margin +0.1082) is reported as an **empirical sufficiency statement for the evaluated Heron r2 calibration set**, not as a universal lower bound on calibration-set size. The repository does not assert that K ≥ 3 is a formal requirement of the protocol, nor that the K=3 result generalises across architectures or beyond the deployment prior. A 4th real-backend out-of-distribution test is not in scope (no 4th Heron r2 backend is available on the IBM Quantum Open plan).
+
+## Section 4 operating-regime soundness condition
+
+The repository uses the threshold-sensitive form of the operating-regime soundness condition:
+
+```
+S * Delta_star^2 >= 2 * ln(1 / delta_FN),    Delta_star = g_star - r_infty(d_hw) - tau > 0.
+```
+
+Older drafts that quoted `N * S * (g^*)^2 / 4` style bounds — and claims of "exponential headroom" derived from them — are superseded by the threshold-sensitive form. The cached `data/processed/section4/master_summary.md` reports `g_star` values per backend × rho as inputs to the corrected condition; the bound column previously labelled "1.000000 detection lower bound" has been retracted.
 
 ## Variance notes
 

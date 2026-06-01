@@ -72,6 +72,12 @@ def main() -> int:
         "",
         "## Experiment 2: K=3 calibration, 5 synthetic test descriptors x 30 instances",
         "",
+        "> Scope of the K=3 result: this is an empirical sufficiency statement",
+        "> for the evaluated Heron r2 calibration set, not a universal lower",
+        "> bound on calibration-set size. K=3 is not stated as a formal",
+        "> requirement, and the result does not assert generalisation beyond",
+        "> the deployment prior or to non-Heron-r2 architectures.",
+        "",
         "| Test desc seed | Passes | Mean margin | 95% bootstrap CI |",
         "|---|---:|---:|---|",
     ]

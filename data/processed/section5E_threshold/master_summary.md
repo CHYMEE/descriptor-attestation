@@ -18,6 +18,8 @@ Predictor instances: 30 (predictor_seed = 1..30).
 
 Calibration set: {Kingston, Fez, Marrakesh}. Test: 5 deployment-prior synthetic descriptors at seeds 100..104.
 
+> **Scope of the K=3 result.** The K=3 result is an *empirical sufficiency statement for the evaluated Heron r2 calibration set*, not a universal lower bound on calibration-set size. It does not assert that K ≥ 3 is formally required, nor that K=3 generalises across architectures or beyond the deployment prior. Out-of-distribution generalisation to a 4th real backend is not tested here (no 4th Heron r2 backend is available on the IBM Quantum Open plan).
+
 | Test desc seed | Passes | Mean margin | 95% bootstrap CI |
 |---|---:|---:|---|
 | 100 | 30/30 | +0.1117 | [+0.1065, +0.1165] |
