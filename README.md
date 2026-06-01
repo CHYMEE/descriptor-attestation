@@ -97,7 +97,24 @@ See `docs/qst_review_guide.md` for the mapping between every manuscript section 
 
 ## Citation
 
-Until the Zenodo DOI is issued, please cite the manuscript directly. After DOI issuance, the `CITATION.cff` will carry both citations and GitHub's "Cite this repository" button will resolve to the DOI.
+If you use this software or the cached results, please cite both the software (via the Zenodo DOI) and the manuscript:
+
+**Software** (Zenodo, v0.1.0):
+
+```bibtex
+@software{amadi_descriptor_attestation_software_2026,
+  title     = {descriptor-attestation: reproduction code for descriptor attestation of federated quantum calibration},
+  author    = {Amadi, Chimeremma Sandra and Afangideh, Aniekan Asuquo and
+               Awad, Menna Magdy and Ahmed, Abdelrahman Elsayed and Jun, Taesoo},
+  year      = {2026},
+  version   = {0.1.0},
+  doi       = {10.5281/zenodo.20483669},
+  url       = {https://doi.org/10.5281/zenodo.20483669},
+  publisher = {Zenodo}
+}
+```
+
+**Manuscript** (QST, 2026):
 
 ```bibtex
 @article{amadi_descriptor_attestation_2026,
@@ -109,6 +126,8 @@ Until the Zenodo DOI is issued, please cite the manuscript directly. After DOI i
   doi    = {TBD}
 }
 ```
+
+GitHub's "Cite this repository" button (on the right sidebar at https://github.com/CHYMEE/descriptor-attestation) uses the `CITATION.cff` and resolves to the Zenodo DOI.
 
 ## License
 

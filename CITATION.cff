@@ -35,9 +35,11 @@ keywords:
   - "federated quantum computing"
   - "witness circuits"
   - "calibration attestation"
-# After uploading to Zenodo, replace `doi: TBD` with the Zenodo-issued DOI
-# and add an `identifiers:` block (see docs/zenodo_release_checklist.md).
-doi: "TBD"
+doi: "10.5281/zenodo.20483669"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20483669"
+    description: "Zenodo archive of the v0.1.0 release of descriptor-attestation"
 preferred-citation:
   type: article
   title: "Descriptor attestation for federated quantum calibration"
@@ -63,4 +65,4 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0002-1435-3769"
   journal: "Quantum Science and Technology"
   year: 2026
-  doi: "TBD"
+  doi: "TBD"   # journal DOI; will be filled when the manuscript is accepted
